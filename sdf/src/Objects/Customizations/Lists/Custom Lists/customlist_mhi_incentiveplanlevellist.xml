@@ -1,0 +1,100 @@
+<customlist scriptid="customlist_mhi_incentiveplanlevellist">
+  <description></description>
+  <isinactive>F</isinactive>
+  <isordered>F</isordered>
+  <name>Incentive Plan Level List</name>
+  <customvalues>
+    <customvalue scriptid="val_13269_5411584_sb1_550">
+      <isinactive>F</isinactive>
+      <value>Assoc Dir</value>
+    </customvalue>
+    <customvalue scriptid="val_13251_5411584_sb1_733">
+      <isinactive>F</isinactive>
+      <value>Case Manager I, II, Hourly</value>
+    </customvalue>
+    <customvalue scriptid="val_13252_5411584_sb1_115">
+      <isinactive>F</isinactive>
+      <value>Case Manager III</value>
+    </customvalue>
+    <customvalue scriptid="val_13259_5411584_sb1_569">
+      <isinactive>F</isinactive>
+      <value>CEO</value>
+    </customvalue>
+    <customvalue scriptid="val_13268_5411584_sb1_113">
+      <isinactive>F</isinactive>
+      <value>Chief</value>
+    </customvalue>
+    <customvalue scriptid="val_13273_5411584_sb1_809">
+      <isinactive>F</isinactive>
+      <value>Chief Leadership Cohort (CPO, CFO, CGO, CSMAO)</value>
+    </customvalue>
+    <customvalue scriptid="val_13253_5411584_sb1_937">
+      <isinactive>F</isinactive>
+      <value>Coordinator/Specialist</value>
+    </customvalue>
+    <customvalue scriptid="val_13275_5411584_sb1_790">
+      <isinactive>F</isinactive>
+      <value>CRM/Dev Manager</value>
+    </customvalue>
+    <customvalue scriptid="val_13260_5411584_sb1_207">
+      <isinactive>F</isinactive>
+      <value>Director</value>
+    </customvalue>
+    <customvalue scriptid="val_13262_5411584_sb1_738">
+      <isinactive>F</isinactive>
+      <value>Major Gift Officer/National Director, Leadership Giving</value>
+    </customvalue>
+    <customvalue scriptid="val_13261_5411584_sb1_646">
+      <isinactive>F</isinactive>
+      <value>Manager</value>
+    </customvalue>
+    <customvalue scriptid="val_13276_5411584_sb1_559">
+      <isinactive>F</isinactive>
+      <value>National Director</value>
+    </customvalue>
+    <customvalue scriptid="val_13254_5411584_sb1_476">
+      <isinactive>F</isinactive>
+      <value>Not Eligible</value>
+    </customvalue>
+    <customvalue scriptid="val_13274_5411584_sb1_318">
+      <isinactive>F</isinactive>
+      <value>Professional</value>
+    </customvalue>
+    <customvalue scriptid="val_13270_5411584_sb1_279">
+      <isinactive>F</isinactive>
+      <value>Regional Director</value>
+    </customvalue>
+    <customvalue scriptid="val_13272_5411584_sb1_476">
+      <isinactive>F</isinactive>
+      <value>Senior Manager</value>
+    </customvalue>
+    <customvalue scriptid="val_13263_5411584_sb1_985">
+      <isinactive>F</isinactive>
+      <value>Sr CRM/Sr. Dev Mgr</value>
+    </customvalue>
+    <customvalue scriptid="val_13264_5411584_sb1_380">
+      <isinactive>F</isinactive>
+      <value>Sr Director/ Sr National Director</value>
+    </customvalue>
+    <customvalue scriptid="val_13265_5411584_sb1_833">
+      <isinactive>F</isinactive>
+      <value>Sr Director_PrP</value>
+    </customvalue>
+    <customvalue scriptid="val_13255_5411584_sb1_454">
+      <isinactive>F</isinactive>
+      <value>Sr. Specialist/Sr. Case Mgr/Navigator/QA Auditor</value>
+    </customvalue>
+    <customvalue scriptid="val_13271_5411584_sb1_751">
+      <isinactive>F</isinactive>
+      <value>Sr. Web/Data Manager</value>
+    </customvalue>
+    <customvalue scriptid="val_13267_5411584_sb1_987">
+      <isinactive>F</isinactive>
+      <value>SVP</value>
+    </customvalue>
+    <customvalue scriptid="val_13266_5411584_sb1_967">
+      <isinactive>F</isinactive>
+      <value>Vice President</value>
+    </customvalue>
+  </customvalues>
+</customlist>

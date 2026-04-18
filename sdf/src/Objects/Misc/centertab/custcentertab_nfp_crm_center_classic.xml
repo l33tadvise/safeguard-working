@@ -1,0 +1,10 @@
+<centertab scriptid="custcentertab_nfp_crm_center_classic">
+  <allcustomers>F</allcustomers>
+  <allemployees>F</allemployees>
+  <allpartners>F</allpartners>
+  <allroles>T</allroles>
+  <allvendors>F</allvendors>
+  <audslctrole></audslctrole>
+  <center>BASIC</center>
+  <label>NFP CRM Center</label>
+</centertab>

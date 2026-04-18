@@ -1,0 +1,32 @@
+<customsegment scriptid="cseg1">
+  <defaultrecordaccesslevel>VIEW</defaultrecordaccesslevel>
+  <defaultsearchaccesslevel>VIEW</defaultsearchaccesslevel>
+  <defaultselection></defaultselection>
+  <description></description>
+  <displaytype>NORMAL</displaytype>
+  <fieldtype>SELECT</fieldtype>
+  <filteredby></filteredby>
+  <hasglimpact>T</hasglimpact>
+  <help></help>
+  <ismandatory>F</ismandatory>
+  <label>Budget Owner</label>
+  <recordtype>[scriptid=customrecord_cseg1]</recordtype>
+  <valuesdisplayorder>SUBLIST</valuesdisplayorder>
+  <segmentapplication>
+    <transactionbody>
+    </transactionbody>
+    <transactionline>
+    </transactionline>
+    <entities>
+    </entities>
+    <crm>
+    </crm>
+    <items>
+      <subtype>BOTH</subtype>
+    </items>
+    <otherrecords>
+    </otherrecords>
+    <customrecords>
+    </customrecords>
+  </segmentapplication>
+</customsegment>

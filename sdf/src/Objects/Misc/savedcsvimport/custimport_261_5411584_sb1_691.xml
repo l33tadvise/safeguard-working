@@ -1,0 +1,110 @@
+<savedcsvimport scriptid="custimport_261_5411584_sb1_691">
+  <charencoding>windows-1252</charencoding>
+  <columndelimiter>COMMA</columndelimiter>
+  <datahandling>ADD</datahandling>
+  <decimaldelimiter>PERIOD</decimaldelimiter>
+  <ignorereadonly>T</ignorereadonly>
+  <importname>Pledge Import - SA </importname>
+  <logsystemnotescustfields>F</logsystemnotescustfields>
+  <multiselectdelimiter>|</multiselectdelimiter>
+  <overwritemissingfields>F</overwritemissingfields>
+  <overwritesublists>F</overwritesublists>
+  <recordtype>CUSTOMERPAYMENT</recordtype>
+  <runserversuitescript>T</runserversuitescript>
+  <transactionform>[appid=com.netsuite.nfpcustomization, scriptid=custform_103_5411584_sb1_327]</transactionform>
+  <usemultithread>F</usemultithread>
+  <validatemandatorycustfields>T</validatemandatorycustfields>
+  <audience>
+    <allemployees>F</allemployees>
+    <allpartners>F</allpartners>
+    <allroles>F</allroles>
+    <globaledit>F</globaledit>
+    <ispublic>F</ispublic>
+    <roles></roles>
+  </audience>
+  <filemappings>
+    <filemapping>
+      <file>CUSTOMERPAYMENT</file>
+    </filemapping>
+  </filemappings>
+  <recordmappings>
+    <recordmapping>
+      <record>CUSTOMERPAYMENT:APPLY</record>
+      <fieldmappings>
+        <fieldmapping>
+          <field>AMOUNT</field>
+          <columnreference>
+            <column>Credit amount</column>
+            <file>CUSTOMERPAYMENT</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>DOC</field>
+          <columnreference>
+            <column>Gift ID (Invoice ID)</column>
+            <file>CUSTOMERPAYMENT</file>
+            <type>EXTERNAL_ID</type>
+          </columnreference>
+        </fieldmapping>
+      </fieldmappings>
+    </recordmapping>
+    <recordmapping>
+      <record>CUSTOMERPAYMENT</record>
+      <fieldmappings>
+        <fieldmapping>
+          <field>ARACCT</field>
+          <value>119</value>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[appid=com.netsuite.nfpfinancials, type=customsegment, scriptid=cseg_npo_restrictn]</field>
+          <value>1</value>
+        </fieldmapping>
+        <fieldmapping>
+          <field>CUSTBODY2</field>
+          <columnreference>
+            <column>Payment Batch</column>
+            <file>CUSTOMERPAYMENT</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=custbody_ext_gift_id]</field>
+          <columnreference>
+            <column>Gift ID (Invoice ID)</column>
+            <file>CUSTOMERPAYMENT</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>CUSTOMER</field>
+          <columnreference>
+            <column>constituent (External ID)</column>
+            <file>CUSTOMERPAYMENT</file>
+            <type>EXTERNAL_ID</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>EXTERNALID</field>
+          <columnreference>
+            <column>Gift ID (Invoice ID)</column>
+            <file>CUSTOMERPAYMENT</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>HANDLINGMODE</field>
+          <value>PROCESS</value>
+        </fieldmapping>
+        <fieldmapping>
+          <field>TRANDATE</field>
+          <columnreference>
+            <column>Post date</column>
+            <file>CUSTOMERPAYMENT</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+      </fieldmappings>
+    </recordmapping>
+  </recordmappings>
+</savedcsvimport>

@@ -1,0 +1,25 @@
+<suitelet scriptid="customscript_single_so_revenue_sl">
+  <description></description>
+  <isinactive>F</isinactive>
+  <name>S_PO_3 - Singe Pledge Revenue Create SL</name>
+  <notifyadmins>F</notifyadmins>
+  <notifyemails></notifyemails>
+  <notifyowner>T</notifyowner>
+  <notifyuser>F</notifyuser>
+  <scriptfile>[/SuiteScripts/single_pledge_revenue_creation_suitelet.js]</scriptfile>
+  <scriptdeployments>
+    <scriptdeployment scriptid="customdeploy_single_so_revenue_sl">
+      <allemployees>F</allemployees>
+      <allpartners>F</allpartners>
+      <allroles>T</allroles>
+      <audslctrole></audslctrole>
+      <eventtype></eventtype>
+      <isdeployed>T</isdeployed>
+      <isonline>T</isonline>
+      <loglevel>DEBUG</loglevel>
+      <runasrole>ADMINISTRATOR</runasrole>
+      <status>RELEASED</status>
+      <title>SO Revenue SL</title>
+    </scriptdeployment>
+  </scriptdeployments>
+</suitelet>

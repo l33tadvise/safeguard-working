@@ -1,0 +1,70 @@
+<savedcsvimport scriptid="custimport_294_5411584_sb1_691">
+  <charencoding>UTF_8</charencoding>
+  <columndelimiter>COMMA</columndelimiter>
+  <datahandling>UPDATE</datahandling>
+  <decimaldelimiter>PERIOD</decimaldelimiter>
+  <ignorereadonly>T</ignorereadonly>
+  <importname>PanCAN | Update Journal Lines - Program for NA RF</importname>
+  <logsystemnotescustfields>F</logsystemnotescustfields>
+  <multiselectdelimiter>|</multiselectdelimiter>
+  <overwritemissingfields>F</overwritemissingfields>
+  <overwritesublists>F</overwritesublists>
+  <recordtype>JOURNALENTRY</recordtype>
+  <runserversuitescript>F</runserversuitescript>
+  <transactionform>[appid=com.netsuite.nfpcustomization, scriptid=custform_85_5411584_592]</transactionform>
+  <usemultithread>F</usemultithread>
+  <validatemandatorycustfields>T</validatemandatorycustfields>
+  <audience>
+    <allemployees>F</allemployees>
+    <allpartners>F</allpartners>
+    <allroles>F</allroles>
+    <globaledit>F</globaledit>
+    <ispublic>F</ispublic>
+    <roles></roles>
+  </audience>
+  <filemappings>
+    <filemapping>
+      <file>JOURNALENTRY</file>
+    </filemapping>
+  </filemappings>
+  <recordmappings>
+    <recordmapping>
+      <record>JOURNALENTRY</record>
+      <fieldmappings>
+        <fieldmapping>
+          <field>ID</field>
+          <columnreference>
+            <column>Internal ID</column>
+            <file>JOURNALENTRY</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+      </fieldmappings>
+    </recordmapping>
+    <recordmapping>
+      <record>JOURNALENTRY:LINE</record>
+      <fieldmappings>
+        <fieldmapping>
+          <field>CLASS</field>
+          <columnreference>
+            <column>Program ID</column>
+            <file>JOURNALENTRY</file>
+            <type>EXTERNAL_ID</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[appid=com.netsuite.nfpfinancials, type=customsegment, scriptid=cseg_npo_restrictn]</field>
+          <value>2</value>
+        </fieldmapping>
+        <fieldmapping>
+          <field>LINE</field>
+          <columnreference>
+            <column>Line ID</column>
+            <file>JOURNALENTRY</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+      </fieldmappings>
+    </recordmapping>
+  </recordmappings>
+</savedcsvimport>

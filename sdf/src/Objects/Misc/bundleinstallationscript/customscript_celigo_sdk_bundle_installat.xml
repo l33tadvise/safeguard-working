@@ -1,0 +1,46 @@
+<bundleinstallationscript scriptid="customscript_celigo_sdk_bundle_installat">
+  <afterinstallfunction>Celigo.ScriptManager.afterInstall</afterinstallfunction>
+  <afterupdatefunction>Celigo.ScriptManager.afterUpdate</afterupdatefunction>
+  <beforeinstallfunction>Celigo.ScriptManager.beforeInstall</beforeinstallfunction>
+  <beforeuninstallfunction>Celigo.ScriptManager.beforeUninstall</beforeuninstallfunction>
+  <beforeupdatefunction>Celigo.ScriptManager.beforeUpdate</beforeupdatefunction>
+  <description></description>
+  <isinactive>F</isinactive>
+  <name>Celigo Integrator Bundle Installation</name>
+  <notifyadmins>F</notifyadmins>
+  <notifyemails></notifyemails>
+  <notifyowner>F</notifyowner>
+  <scriptfile>[/SuiteBundles/Bundle 20038/Celigo.build.IntegratorUi.closure.js]</scriptfile>
+  <scriptdeployments>
+    <scriptdeployment scriptid="customdeploy1">
+      <isdeployed>T</isdeployed>
+      <loglevel>DEBUG</loglevel>
+      <runasrole>ADMINISTRATOR</runasrole>
+      <status>RELEASED</status>
+      <title>Celigo SDK Bundle Installation</title>
+    </scriptdeployment>
+  </scriptdeployments>
+  <libraries>
+    <library>
+      <scriptfile>[/SuiteBundles/Bundle 20038/Celigo_Basis.closure.js]</scriptfile>
+    </library>
+    <library>
+      <scriptfile>[/SuiteBundles/Bundle 20038/Celigo_LicensingServices.closure.js]</scriptfile>
+    </library>
+    <library>
+      <scriptfile>[/SuiteBundles/Bundle 20038/Celigo.build.Integrator.closure.js]</scriptfile>
+    </library>
+    <library>
+      <scriptfile>[/SuiteBundles/Bundle 20038/Celigo_Adaptor.closure.js]</scriptfile>
+    </library>
+    <library>
+      <scriptfile>[/SuiteBundles/Bundle 20038/BundleInstallCombineClosures.js]</scriptfile>
+    </library>
+    <library>
+      <scriptfile>[/SuiteBundles/Bundle 20038/CeligoSecureHelper.js]</scriptfile>
+    </library>
+    <library>
+      <scriptfile>[/SuiteBundles/Bundle 20038/Celigo_CustomBuildConfig.js]</scriptfile>
+    </library>
+  </libraries>
+</bundleinstallationscript>

@@ -1,0 +1,17 @@
+<centercategory scriptid="custcentercategory22">
+  <center>[scriptid=custcenter3]</center>
+  <centertab>[scriptid=custcentertab31]</centertab>
+  <label>Sales</label>
+  <links>
+    <link>
+      <linkid>LIST_TRAN_SALESORD</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>LIST_TRAN_CASHSALE</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

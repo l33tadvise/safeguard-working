@@ -1,0 +1,55 @@
+<centercategory scriptid="custcentercategory6">
+  <center>ACCOUNTCENTER</center>
+  <centertab>[scriptid=custcentertab7]</centertab>
+  <label>Transactions</label>
+  <links>
+    <link>
+      <linklabel>Asset Proposal</linklabel>
+      <linkobject>[scriptid=customscript_fam_assetproposal_su.customdeploy_fam_assetproposal_su]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Manage Asset Proposal</linklabel>
+      <linkobject>[scriptid=customscript_fam_manageassetproposal_su.customdeploy_fam_manageassetproposal_su]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Asset Creation</linklabel>
+      <linkobject>[scriptid=customscript_fam_assetproposal_su.customdeploy_fam_assetcreation_su]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Asset Depreciation</linklabel>
+      <linkobject>[scriptid=customscript_fam_assetdepreciation_su.customdeploy_fam_assetdepreciation_su]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Asset Disposal</linklabel>
+      <linkobject>[scriptid=customscript_fam_disposal_su.customdeploy_fam_disposal_su]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Asset Revaluation</linklabel>
+      <linkobject>[scriptid=customscript_fam_assetrevaluation_su.customdeploy_fam_assetrevaluation_su]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Asset Split</linklabel>
+      <linkobject>[scriptid=customscript_fam_su_assetsplit.customdeploy_fam_su_assetsplit]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Asset Transfer</linklabel>
+      <linkobject>[scriptid=customscript_fam_assettransfer_su.customdeploy_fam_assettransfer_su]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

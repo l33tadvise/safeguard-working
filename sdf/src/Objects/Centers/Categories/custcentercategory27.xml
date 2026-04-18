@@ -1,0 +1,17 @@
+<centercategory scriptid="custcentercategory27">
+  <center>[scriptid=custcenter3]</center>
+  <centertab>[scriptid=custcentertab32]</centertab>
+  <label>Accounting</label>
+  <links>
+    <link>
+      <linkid>LIST_ITEM</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>LIST_SHIPITEM</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

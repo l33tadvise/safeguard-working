@@ -1,0 +1,28 @@
+<customlist scriptid="customlist_appeal_category_list">
+  <description></description>
+  <isinactive>T</isinactive>
+  <isordered>F</isordered>
+  <name>Appeal Category List</name>
+  <customvalues>
+    <customvalue scriptid="val_62710_5411584_sb1_957">
+      <isinactive>F</isinactive>
+      <value>Appeal Category</value>
+    </customvalue>
+    <customvalue scriptid="val_62711_5411584_sb1_656">
+      <isinactive>F</isinactive>
+      <value>Direct Mail Campaign</value>
+    </customvalue>
+    <customvalue scriptid="val_62712_5411584_sb1_404">
+      <isinactive>F</isinactive>
+      <value>Mid-Level</value>
+    </customvalue>
+    <customvalue scriptid="val_62714_5411584_sb1_751">
+      <isinactive>F</isinactive>
+      <value>Monthly Giving</value>
+    </customvalue>
+    <customvalue scriptid="val_62713_5411584_sb1_437">
+      <isinactive>F</isinactive>
+      <value>Newsletter</value>
+    </customvalue>
+  </customvalues>
+</customlist>

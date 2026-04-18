@@ -1,0 +1,13 @@
+<customglplugin scriptid="customscript1034">
+  <description></description>
+  <isinactive>F</isinactive>
+  <loglevel>DEBUG</loglevel>
+  <name>pledge revenue custom transaction</name>
+  <notifyadmins>F</notifyadmins>
+  <notifyemails></notifyemails>
+  <notifyowner>T</notifyowner>
+  <notifyuser>F</notifyuser>
+  <runasrole></runasrole>
+  <scriptfile>[/SuiteScripts/revenue_transaction_suitegl.js]</scriptfile>
+  <status>RELEASED</status>
+</customglplugin>

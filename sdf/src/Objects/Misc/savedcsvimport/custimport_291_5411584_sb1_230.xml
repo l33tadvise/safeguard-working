@@ -1,0 +1,94 @@
+<savedcsvimport scriptid="custimport_291_5411584_sb1_230">
+  <charencoding>windows-1252</charencoding>
+  <columndelimiter>COMMA</columndelimiter>
+  <datahandling>ADD</datahandling>
+  <decimaldelimiter>PERIOD</decimaldelimiter>
+  <ignorereadonly>T</ignorereadonly>
+  <importname>PanCAN| Dispute JE</importname>
+  <logsystemnotescustfields>F</logsystemnotescustfields>
+  <multiselectdelimiter>|</multiselectdelimiter>
+  <overwritemissingfields>F</overwritemissingfields>
+  <overwritesublists>F</overwritesublists>
+  <recordtype>JOURNALENTRY</recordtype>
+  <runserversuitescript>T</runserversuitescript>
+  <transactionform>[appid=com.netsuite.nfpcustomization, scriptid=custform_85_5411584_592]</transactionform>
+  <usemultithread>F</usemultithread>
+  <validatemandatorycustfields>T</validatemandatorycustfields>
+  <audience>
+    <allemployees>F</allemployees>
+    <allpartners>F</allpartners>
+    <allroles>F</allroles>
+    <globaledit>F</globaledit>
+    <ispublic>F</ispublic>
+    <roles></roles>
+  </audience>
+  <filemappings>
+    <filemapping>
+      <file>JOURNALENTRY</file>
+    </filemapping>
+  </filemappings>
+  <recordmappings>
+    <recordmapping>
+      <record>JOURNALENTRY</record>
+      <fieldmappings>
+        <fieldmapping>
+          <field>MEMO</field>
+          <value>Disputes XX/XX/XXXX</value>
+        </fieldmapping>
+        <fieldmapping>
+          <field>SUBSIDIARY</field>
+          <value>2</value>
+        </fieldmapping>
+        <fieldmapping>
+          <field>TRANDATE</field>
+          <value>05/23/2025</value>
+        </fieldmapping>
+      </fieldmappings>
+    </recordmapping>
+    <recordmapping>
+      <record>JOURNALENTRY:LINE</record>
+      <fieldmappings>
+        <fieldmapping>
+          <field>ACCOUNT</field>
+          <columnreference>
+            <column>Account Number</column>
+            <file>JOURNALENTRY</file>
+            <type>EXTERNAL_ID</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>CREDIT</field>
+          <columnreference>
+            <column>Credit Amount</column>
+            <file>JOURNALENTRY</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>DEBIT</field>
+          <columnreference>
+            <column>Debit amount</column>
+            <file>JOURNALENTRY</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>ENTITY</field>
+          <columnreference>
+            <column>Constituent ID</column>
+            <file>JOURNALENTRY</file>
+            <type>EXTERNAL_ID</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>MEMO</field>
+          <columnreference>
+            <column>Transaction ID</column>
+            <file>JOURNALENTRY</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+      </fieldmappings>
+    </recordmapping>
+  </recordmappings>
+</savedcsvimport>

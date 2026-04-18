@@ -1,0 +1,19 @@
+<centercategory scriptid="custcentercategory12">
+  <center>BASIC</center>
+  <centertab>[scriptid=custcentertab8]</centertab>
+  <label>Lists</label>
+  <links>
+    <link>
+      <linklabel>Assets</linklabel>
+      <linkobject>[scriptid=customrecord_ncfar_asset]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Build Compound Asset</linklabel>
+      <linkobject>[scriptid=customscript_fam_compound_asset_su.customdeploy_fam_compound_asset_su]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

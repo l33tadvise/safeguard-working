@@ -1,0 +1,14 @@
+<plugintype scriptid="customscript1029">
+  <deploymentmodel>ALLOW_MULTIPLE</deploymentmodel>
+  <description></description>
+  <documentationfile></documentationfile>
+  <isinactive>T</isinactive>
+  <loglevel>DEBUG</loglevel>
+  <name>Pledge Invoice SuiteGL Plug-In</name>
+  <notifyadmins>F</notifyadmins>
+  <notifyemails></notifyemails>
+  <notifyowner>T</notifyowner>
+  <notifyuser>F</notifyuser>
+  <scriptfile>[/SuiteScripts/simple_suitegl_test.js]</scriptfile>
+  <status>RELEASED</status>
+</plugintype>

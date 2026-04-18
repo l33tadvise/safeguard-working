@@ -1,0 +1,34 @@
+<translationcollection scriptid="custcollectiontranslations_chart_80_e3937293db8c4113aab0a8e">
+  <defaultlanguage>en-US</defaultlanguage>
+  <name translate="T">[scriptid=custcollectiontranslations_chart_80_e3937293db8c4113aab0a8e.chart_name_445_30]</name>
+  <strings>
+    <string scriptid="chart_category_axis_445_26">
+      <defaulttranslation>Program</defaulttranslation>
+      <description>Chart category axis</description>
+    </string>
+    <string scriptid="chart_measure_445_27">
+      <defaulttranslation>Revenue Released</defaulttranslation>
+      <description>Measure in chart</description>
+    </string>
+    <string scriptid="chart_legend_axis_445_28">
+      <defaulttranslation>Amounts</defaulttranslation>
+      <description>Chart legend axis</description>
+    </string>
+    <string scriptid="chart_measure_445_29">
+      <defaulttranslation>Net Assets</defaulttranslation>
+      <description>Measure in chart</description>
+    </string>
+    <string scriptid="chart_name_445_30">
+      <defaulttranslation>Program Expense and Revenue Analysis</defaulttranslation>
+      <description>Chart name</description>
+    </string>
+    <string scriptid="chart_measure_445_31">
+      <defaulttranslation>Total Expenses</defaulttranslation>
+      <description>Measure in chart</description>
+    </string>
+    <string scriptid="chart_title_445_32">
+      <defaulttranslation>Program Expense and Revenue Analysis</defaulttranslation>
+      <description>Chart title</description>
+    </string>
+  </strings>
+</translationcollection>

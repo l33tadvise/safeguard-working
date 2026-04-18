@@ -1,0 +1,13 @@
+<centercategory scriptid="custcentercategory_dm_household_preferences_classic">
+  <center>BASIC</center>
+  <centertab>[scriptid=custcentertab_nfp_crm_center_classic]</centertab>
+  <label>Household Preferences</label>
+  <links>
+    <link>
+      <linklabel>Household Preferences</linklabel>
+      <linkobject>[scriptid=customrecord_dm_household_preferences]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

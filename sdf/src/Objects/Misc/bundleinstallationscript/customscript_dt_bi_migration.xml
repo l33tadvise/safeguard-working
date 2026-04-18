@@ -1,0 +1,18 @@
+<bundleinstallationscript scriptid="customscript_dt_bi_migration">
+  <description></description>
+  <isinactive>F</isinactive>
+  <name>Dashboard Tiles BI</name>
+  <notifyadmins>F</notifyadmins>
+  <notifyemails></notifyemails>
+  <notifyowner>T</notifyowner>
+  <scriptfile>[/SuiteBundles/Bundle 185219/com.netsuite.dashboardtiles/src/feature/BundleInstallation/DT_BI_Bundle_Installation.js]</scriptfile>
+  <scriptdeployments>
+    <scriptdeployment scriptid="customdeploy_dt_bi_migration">
+      <isdeployed>T</isdeployed>
+      <loglevel>ERROR</loglevel>
+      <runasrole>ADMINISTRATOR</runasrole>
+      <status>RELEASED</status>
+      <title>Dashboard Tiles BI</title>
+    </scriptdeployment>
+  </scriptdeployments>
+</bundleinstallationscript>

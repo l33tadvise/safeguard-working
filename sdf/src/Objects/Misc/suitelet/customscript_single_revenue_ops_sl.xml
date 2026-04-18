@@ -1,0 +1,25 @@
+<suitelet scriptid="customscript_single_revenue_ops_sl">
+  <description></description>
+  <isinactive>F</isinactive>
+  <name>S_RT_3 - Single _ Rev. Trans Posting SL</name>
+  <notifyadmins>F</notifyadmins>
+  <notifyemails></notifyemails>
+  <notifyowner>T</notifyowner>
+  <notifyuser>F</notifyuser>
+  <scriptfile>[/SuiteScripts/single_revenue_txn_sl.js]</scriptfile>
+  <scriptdeployments>
+    <scriptdeployment scriptid="customdeploy_single_revenue_ops_sl">
+      <allemployees>F</allemployees>
+      <allpartners>F</allpartners>
+      <allroles>T</allroles>
+      <audslctrole></audslctrole>
+      <eventtype></eventtype>
+      <isdeployed>T</isdeployed>
+      <isonline>T</isonline>
+      <loglevel>DEBUG</loglevel>
+      <runasrole>ADMINISTRATOR</runasrole>
+      <status>RELEASED</status>
+      <title>S_RT_3 - Single _ Rev. Trans Posting SL Deploy</title>
+    </scriptdeployment>
+  </scriptdeployments>
+</suitelet>

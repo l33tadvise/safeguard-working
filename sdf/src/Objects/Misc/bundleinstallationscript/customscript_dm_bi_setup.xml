@@ -1,0 +1,18 @@
+<bundleinstallationscript scriptid="customscript_dm_bi_setup">
+  <description></description>
+  <isinactive>F</isinactive>
+  <name>NFPF BI Setup</name>
+  <notifyadmins>F</notifyadmins>
+  <notifyemails></notifyemails>
+  <notifyowner>T</notifyowner>
+  <scriptfile>[/SuiteBundles/Bundle 245812/com.netsuite.donormanagement/src/BundleInstaller/main/NFPF_BI_Setup.js]</scriptfile>
+  <scriptdeployments>
+    <scriptdeployment scriptid="customdeploy_dm_bi_setup">
+      <isdeployed>T</isdeployed>
+      <loglevel>ERROR</loglevel>
+      <runasrole>ADMINISTRATOR</runasrole>
+      <status>RELEASED</status>
+      <title>NFPDM BI Setup</title>
+    </scriptdeployment>
+  </scriptdeployments>
+</bundleinstallationscript>

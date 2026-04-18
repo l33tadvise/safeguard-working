@@ -1,0 +1,13 @@
+<centercategory scriptid="custcentercategory_nfp_const_mgmt_classic_fundraising">
+  <center>BASIC</center>
+  <centertab>[scriptid=custcentertab_nfp_crm_center_classic]</centertab>
+  <label>Fundraising</label>
+  <links>
+    <link>
+      <linklabel>Soft Credits</linklabel>
+      <linkobject>[scriptid=customrecord_dm_soft_credit]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

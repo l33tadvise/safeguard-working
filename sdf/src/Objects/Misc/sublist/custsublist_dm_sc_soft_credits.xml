@@ -1,0 +1,13 @@
+<sublist scriptid="custsublist_dm_sc_soft_credits">
+  <contact>F</contact>
+  <customer>T</customer>
+  <employee>F</employee>
+  <field></field>
+  <job>F</job>
+  <label>Soft Credits</label>
+  <partner>F</partner>
+  <savedsearch>[scriptid=customsearch_dm_sc_soft_credit_statistic]</savedsearch>
+  <sublisttype>ENTITY</sublisttype>
+  <tab>[appid=com.netsuite.nfpcustomization, scriptid=custtab_giving_statistics_tab]</tab>
+  <vendor>F</vendor>
+</sublist>

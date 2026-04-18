@@ -1,0 +1,10 @@
+<centertab scriptid="custcentertab32">
+  <allcustomers>F</allcustomers>
+  <allemployees>F</allemployees>
+  <allpartners>F</allpartners>
+  <allroles>T</allroles>
+  <allvendors>F</allvendors>
+  <audslctrole></audslctrole>
+  <center>[scriptid=custcenter3]</center>
+  <label>Lists</label>
+</centertab>

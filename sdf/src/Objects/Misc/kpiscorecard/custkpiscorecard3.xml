@@ -1,0 +1,120 @@
+<kpiscorecard scriptid="custkpiscorecard3">
+  <description></description>
+  <name>PanCAN Financial Ratios</name>
+  <useperiods>T</useperiods>
+  <custom>
+    <kpi1></kpi1>
+    <kpi10></kpi10>
+    <kpi2></kpi2>
+    <kpi3></kpi3>
+    <kpi4></kpi4>
+    <kpi5></kpi5>
+    <kpi6></kpi6>
+    <kpi7></kpi7>
+    <kpi8></kpi8>
+    <kpi9></kpi9>
+  </custom>
+  <audience>
+    <allemployees>F</allemployees>
+    <allpartners>F</allpartners>
+    <allroles>T</allroles>
+  </audience>
+  <kpis>
+    <kpi>
+      <formula>({BANKBAL}+{RECEIVABLES}+{OTHERCURRENTASSET})/({PAYABLES}+{CREDITCARDBAL}+{OTHERCURRENTLIAB})</formula>
+      <hidden>F</hidden>
+      <kpi>FORMULANUMERIC</kpi>
+      <label>Current Ratio</label>
+      <lessismore>F</lessismore>
+    </kpi>
+    <kpi>
+      <formula>{SALES}/{RECEIVABLES}</formula>
+      <hidden>F</hidden>
+      <kpi>FORMULANUMERIC</kpi>
+      <label>Receivables Turnover</label>
+      <lessismore>F</lessismore>
+    </kpi>
+    <kpi>
+      <formula>{DAYS}/({SALES}/{RECEIVABLES})</formula>
+      <hidden>F</hidden>
+      <kpi>FORMULANUMERIC</kpi>
+      <label>Days Sales Outstanding</label>
+      <lessismore>T</lessismore>
+    </kpi>
+    <kpi>
+      <formula>{SALES}/({BANKBAL}+{RECEIVABLES}+{OTHERCURRENTASSET}+{FIXEDASSET}+{OTHERASSET})</formula>
+      <hidden>F</hidden>
+      <kpi>FORMULANUMERIC</kpi>
+      <label>Asset Turnover</label>
+      <lessismore>F</lessismore>
+    </kpi>
+    <kpi>
+      <formula>{PROFIT}/{INCOME}</formula>
+      <hidden>F</hidden>
+      <kpi>FORMULAPERCENT</kpi>
+      <label>Operating Margin</label>
+      <lessismore>F</lessismore>
+    </kpi>
+    <kpi>
+      <formula>{PROFIT}/({BANKBAL}+{RECEIVABLES}+{OTHERCURRENTASSET}+{FIXEDASSET}+{OTHERASSET})</formula>
+      <hidden>F</hidden>
+      <kpi>FORMULAPERCENT</kpi>
+      <label>Return on Assets</label>
+      <lessismore>F</lessismore>
+    </kpi>
+    <kpi>
+      <formula>{PROFIT}/{EQUITY}</formula>
+      <hidden>F</hidden>
+      <kpi>FORMULAPERCENT</kpi>
+      <label>Return on Net Assets</label>
+      <lessismore>F</lessismore>
+    </kpi>
+    <kpi>
+      <formula>({PAYABLES}+{CREDITCARDBAL}+{OTHERCURRENTLIAB}+{LONGTERMLIAB})/({BANKBAL}+{RECEIVABLES}+{OTHERCURRENTASSET}+{FIXEDASSET}+{OTHERASSET})</formula>
+      <hidden>F</hidden>
+      <kpi>FORMULANUMERIC</kpi>
+      <label>Debt to Total Assets</label>
+      <lessismore>T</lessismore>
+    </kpi>
+    <kpi>
+      <formula>({PAYABLES}+{CREDITCARDBAL}+{OTHERCURRENTLIAB}+{LONGTERMLIAB})/{EQUITY}</formula>
+      <hidden>F</hidden>
+      <kpi>FORMULANUMERIC</kpi>
+      <label>Debt to Equity</label>
+      <lessismore>T</lessismore>
+    </kpi>
+    <kpi>
+      <formula>({BANKBAL}+{OTHERCURRENTASSET})</formula>
+      <hidden>F</hidden>
+      <kpi>FORMULANUMERIC</kpi>
+      <label></label>
+      <lessismore>F</lessismore>
+    </kpi>
+  </kpis>
+  <ranges>
+    <range>
+      <comparevalueto></comparevalueto>
+      <comparewithprevious>F</comparewithprevious>
+      <comparisontype></comparisontype>
+      <invertcomparison>F</invertcomparison>
+      <label></label>
+      <range>1</range>
+    </range>
+    <range>
+      <comparevalueto></comparevalueto>
+      <comparewithprevious>F</comparewithprevious>
+      <comparisontype></comparisontype>
+      <invertcomparison>F</invertcomparison>
+      <label></label>
+      <range>35</range>
+    </range>
+    <range>
+      <comparevalueto>35</comparevalueto>
+      <comparewithprevious>F</comparewithprevious>
+      <comparisontype>VARIANCE_PERCENT</comparisontype>
+      <invertcomparison>F</invertcomparison>
+      <label>Change</label>
+      <range>1</range>
+    </range>
+  </ranges>
+</kpiscorecard>

@@ -1,0 +1,37 @@
+<scheduledscript scriptid="customscript855">
+  <description></description>
+  <isinactive>F</isinactive>
+  <name>Approve DM JEs</name>
+  <notifyadmins>F</notifyadmins>
+  <notifyemails></notifyemails>
+  <notifyowner>T</notifyowner>
+  <scriptfile>[/SuiteScripts/approve_je.js]</scriptfile>
+  <scriptdeployments>
+    <scriptdeployment scriptid="customdeploy2">
+      <isdeployed>T</isdeployed>
+      <loglevel>DEBUG</loglevel>
+      <status>NOTSCHEDULED</status>
+      <title>Approve DM JEs 2</title>
+      <recurrence>
+        <single>
+          <repeat></repeat>
+          <startdate>2025-03-29</startdate>
+          <starttime>01:00:00Z</starttime>
+        </single>
+      </recurrence>
+    </scriptdeployment>
+    <scriptdeployment scriptid="customdeploy1">
+      <isdeployed>F</isdeployed>
+      <loglevel>DEBUG</loglevel>
+      <status>NOTSCHEDULED</status>
+      <title>Approve DM JEs</title>
+      <recurrence>
+        <single>
+          <repeat></repeat>
+          <startdate>2025-03-29</startdate>
+          <starttime>01:00:00Z</starttime>
+        </single>
+      </recurrence>
+    </scriptdeployment>
+  </scriptdeployments>
+</scheduledscript>

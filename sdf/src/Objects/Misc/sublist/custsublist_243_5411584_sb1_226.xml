@@ -1,0 +1,23 @@
+<sublist scriptid="custsublist_243_5411584_sb1_226">
+  <assemblybuild>F</assemblybuild>
+  <customtransactions></customtransactions>
+  <deposit>F</deposit>
+  <depositapplication>F</depositapplication>
+  <expensereport>F</expensereport>
+  <field></field>
+  <fulfillmentrequest>F</fulfillmentrequest>
+  <inventoryadjustment>F</inventoryadjustment>
+  <itemfulfillment>F</itemfulfillment>
+  <itemreceipt>F</itemreceipt>
+  <journal>F</journal>
+  <label>Adjustments</label>
+  <opportunity>F</opportunity>
+  <payment>F</payment>
+  <purchase>F</purchase>
+  <sale>T</sale>
+  <savedsearch>[scriptid=customsearch892]</savedsearch>
+  <storepickup>F</storepickup>
+  <sublisttype>TRANSACTION</sublisttype>
+  <tab>[scriptid=custtab_adjustments_subtab_transaction]</tab>
+  <vendorpayment>F</vendorpayment>
+</sublist>

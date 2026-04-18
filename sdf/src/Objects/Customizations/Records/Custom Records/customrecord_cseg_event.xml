@@ -1,0 +1,149 @@
+<customrecordtype scriptid="customrecord_cseg_event">
+  <allowattachments>F</allowattachments>
+  <allowinlinedeleting>F</allowinlinedeleting>
+  <allowinlinedetaching>F</allowinlinedetaching>
+  <allowinlineediting>F</allowinlineediting>
+  <allowquickadd>F</allowquickadd>
+  <allowquicksearch>F</allowquicksearch>
+  <customsegment>[type=customsegment, scriptid=cseg_event]</customsegment>
+  <enabledle>F</enabledle>
+  <enablekeywords>F</enablekeywords>
+  <enablemailmerge>F</enablemailmerge>
+  <enableoptimisticlocking>F</enableoptimisticlocking>
+  <enablesystemnotes>T</enablesystemnotes>
+  <icon></icon>
+  <iconbuiltin>T</iconbuiltin>
+  <iconindex></iconindex>
+  <includeinsearchmenu>F</includeinsearchmenu>
+  <showcreationdate>F</showcreationdate>
+  <showcreationdateonlist>F</showcreationdateonlist>
+  <showlastmodified>F</showlastmodified>
+  <showlastmodifiedonlist>F</showlastmodifiedonlist>
+  <shownotes>T</shownotes>
+  <showowner>F</showowner>
+  <showownerallowchange>F</showownerallowchange>
+  <showowneronlist>F</showowneronlist>
+  <customrecordcustomfields>
+    <customrecordcustomfield scriptid="custrecord_event_description">
+      <accesslevel>2</accesslevel>
+      <allowquickadd>F</allowquickadd>
+      <applyformatting>F</applyformatting>
+      <checkspelling>F</checkspelling>
+      <defaultchecked>F</defaultchecked>
+      <defaultselection></defaultselection>
+      <defaultvalue></defaultvalue>
+      <description></description>
+      <displayheight></displayheight>
+      <displaytype>NORMAL</displaytype>
+      <displaywidth></displaywidth>
+      <dynamicdefault></dynamicdefault>
+      <enabletextenhance>F</enabletextenhance>
+      <encryptatrest>F</encryptatrest>
+      <fieldtype>TEXT</fieldtype>
+      <globalsearch>F</globalsearch>
+      <help></help>
+      <isformula>F</isformula>
+      <ismandatory>F</ismandatory>
+      <isparent>F</isparent>
+      <label>Description</label>
+      <linktext></linktext>
+      <maxlength></maxlength>
+      <maxvalue></maxvalue>
+      <minvalue></minvalue>
+      <onparentdelete></onparentdelete>
+      <parentsubtab></parentsubtab>
+      <rolerestrict>F</rolerestrict>
+      <searchcomparefield></searchcomparefield>
+      <searchdefault></searchdefault>
+      <searchlevel>2</searchlevel>
+      <selectrecordtype></selectrecordtype>
+      <showinlist>F</showinlist>
+      <sourcefilterby></sourcefilterby>
+      <sourcefrom></sourcefrom>
+      <sourcelist></sourcelist>
+      <storevalue>T</storevalue>
+      <subtab></subtab>
+    </customrecordcustomfield>
+  </customrecordcustomfields>
+  <instances>
+    <instance scriptid="val_16080_5411584_sb1_587">
+      <custrecord_event_description></custrecord_event_description>
+      <isinactive>T</isinactive>
+      <name>CASFSpring2025</name>
+      <parent></parent>
+    </instance>
+    <instance scriptid="val_16081_5411584_sb1_463">
+      <custrecord_event_description></custrecord_event_description>
+      <isinactive>T</isinactive>
+      <name>MOSLSpring2025</name>
+      <parent></parent>
+    </instance>
+    <instance scriptid="val_16124_5411584_sb1_367">
+      <custrecord_event_description></custrecord_event_description>
+      <isinactive>T</isinactive>
+      <name>NCCHSpring2025</name>
+      <parent></parent>
+    </instance>
+    <instance scriptid="val_16125_5411584_sb1_210">
+      <custrecord_event_description></custrecord_event_description>
+      <isinactive>T</isinactive>
+      <name>VAHRSpring2025</name>
+      <parent></parent>
+    </instance>
+    <instance scriptid="val_16126_5411584_sb1_281">
+      <custrecord_event_description></custrecord_event_description>
+      <isinactive>T</isinactive>
+      <name>CASVSpring2025</name>
+      <parent></parent>
+    </instance>
+    <instance scriptid="val_16127_5411584_sb1_927">
+      <custrecord_event_description></custrecord_event_description>
+      <isinactive>T</isinactive>
+      <name>CAOCSpring2025</name>
+      <parent></parent>
+    </instance>
+    <instance scriptid="val_101764_5411584_sb1_985">
+      <custrecord_event_description></custrecord_event_description>
+      <isinactive>F</isinactive>
+      <name>PS 2025</name>
+      <parent></parent>
+    </instance>
+    <instance scriptid="val_101765_5411584_sb1_418">
+      <custrecord_event_description></custrecord_event_description>
+      <isinactive>F</isinactive>
+      <name>PS 2026</name>
+      <parent></parent>
+    </instance>
+    <instance scriptid="val_101766_5411584_sb1_894">
+      <custrecord_event_description></custrecord_event_description>
+      <isinactive>F</isinactive>
+      <name>PS 2027</name>
+      <parent></parent>
+    </instance>
+    <instance scriptid="val_101767_5411584_sb1_624">
+      <custrecord_event_description></custrecord_event_description>
+      <isinactive>F</isinactive>
+      <name>PS 2028</name>
+      <parent></parent>
+    </instance>
+    <instance scriptid="val_101768_5411584_sb1_754">
+      <custrecord_event_description></custrecord_event_description>
+      <isinactive>F</isinactive>
+      <name>PS 2029</name>
+      <parent></parent>
+    </instance>
+    <instance scriptid="val_101769_5411584_sb1_725">
+      <custrecord_event_description></custrecord_event_description>
+      <isinactive>F</isinactive>
+      <name>PS 2030</name>
+      <parent></parent>
+    </instance>
+  </instances>
+  <links>
+    <link>
+      <linkcategory>BASICSETUPCOMPANY</linkcategory>
+      <linklabel></linklabel>
+      <linktasktype>LIST</linktasktype>
+    </link>
+  </links>
+</customrecordtype>

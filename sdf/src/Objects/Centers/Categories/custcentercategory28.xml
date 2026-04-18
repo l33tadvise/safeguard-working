@@ -1,0 +1,22 @@
+<centercategory scriptid="custcentercategory28">
+  <center>[scriptid=custcenter3]</center>
+  <centertab>[scriptid=custcentertab33]</centertab>
+  <label>Integration</label>
+  <links>
+    <link>
+      <linkid>ADMI_WEBSERVICEPREFS</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>ADMI_WEBSERVICES_STATUS</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>ADMI_WEBSERVICES_USAGE_LOG</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

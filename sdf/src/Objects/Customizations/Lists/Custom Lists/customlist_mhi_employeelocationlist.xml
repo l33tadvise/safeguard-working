@@ -1,0 +1,132 @@
+<customlist scriptid="customlist_mhi_employeelocationlist">
+  <description></description>
+  <isinactive>F</isinactive>
+  <isordered>T</isordered>
+  <name>Employee Location List</name>
+  <customvalues>
+    <customvalue scriptid="val_13293_5411584_sb1_259">
+      <isinactive>F</isinactive>
+      <value>El Segundo</value>
+    </customvalue>
+    <customvalue scriptid="val_13294_5411584_sb1_633">
+      <isinactive>F</isinactive>
+      <value>Tennessee</value>
+    </customvalue>
+    <customvalue scriptid="val_13295_5411584_sb1_345">
+      <isinactive>F</isinactive>
+      <value>Northern California</value>
+    </customvalue>
+    <customvalue scriptid="val_13296_5411584_sb1_861">
+      <isinactive>F</isinactive>
+      <value>Texas</value>
+    </customvalue>
+    <customvalue scriptid="val_13297_5411584_sb1_503">
+      <isinactive>F</isinactive>
+      <value>Massachusetts</value>
+    </customvalue>
+    <customvalue scriptid="val_13298_5411584_sb1_128">
+      <isinactive>F</isinactive>
+      <value>New York</value>
+    </customvalue>
+    <customvalue scriptid="val_13299_5411584_sb1_127">
+      <isinactive>F</isinactive>
+      <value>Nevada</value>
+    </customvalue>
+    <customvalue scriptid="val_13300_5411584_sb1_770">
+      <isinactive>F</isinactive>
+      <value>North Carolina</value>
+    </customvalue>
+    <customvalue scriptid="val_13301_5411584_sb1_934">
+      <isinactive>F</isinactive>
+      <value>Georgia</value>
+    </customvalue>
+    <customvalue scriptid="val_13302_5411584_sb1_987">
+      <isinactive>F</isinactive>
+      <value>Virginia</value>
+    </customvalue>
+    <customvalue scriptid="val_13303_5411584_sb1_374">
+      <isinactive>F</isinactive>
+      <value>Florida</value>
+    </customvalue>
+    <customvalue scriptid="val_13304_5411584_sb1_129">
+      <isinactive>F</isinactive>
+      <value>Seattle Washington</value>
+    </customvalue>
+    <customvalue scriptid="val_13305_5411584_sb1_121">
+      <isinactive>F</isinactive>
+      <value>Maryland</value>
+    </customvalue>
+    <customvalue scriptid="val_13306_5411584_sb1_497">
+      <isinactive>F</isinactive>
+      <value>Washington, D.C.</value>
+    </customvalue>
+    <customvalue scriptid="val_13307_5411584_sb1_679">
+      <isinactive>F</isinactive>
+      <value>Arizona</value>
+    </customvalue>
+    <customvalue scriptid="val_13308_5411584_sb1_699">
+      <isinactive>F</isinactive>
+      <value>Vermont</value>
+    </customvalue>
+    <customvalue scriptid="val_13309_5411584_sb1_140">
+      <isinactive>F</isinactive>
+      <value>Indiana</value>
+    </customvalue>
+    <customvalue scriptid="val_13310_5411584_sb1_254">
+      <isinactive>F</isinactive>
+      <value>Atlanta, Georgia</value>
+    </customvalue>
+    <customvalue scriptid="val_13311_5411584_sb1_952">
+      <isinactive>F</isinactive>
+      <value>New Jersey</value>
+    </customvalue>
+    <customvalue scriptid="val_13312_5411584_sb1_629">
+      <isinactive>F</isinactive>
+      <value>Alabama</value>
+    </customvalue>
+    <customvalue scriptid="val_13313_5411584_sb1_300">
+      <isinactive>F</isinactive>
+      <value>Illinois</value>
+    </customvalue>
+    <customvalue scriptid="val_13314_5411584_sb1_869">
+      <isinactive>F</isinactive>
+      <value>Kentucky</value>
+    </customvalue>
+    <customvalue scriptid="val_13315_5411584_sb1_185">
+      <isinactive>F</isinactive>
+      <value>Wisconsin</value>
+    </customvalue>
+    <customvalue scriptid="val_13316_5411584_sb1_328">
+      <isinactive>F</isinactive>
+      <value>Colorado</value>
+    </customvalue>
+    <customvalue scriptid="val_13317_5411584_sb1_836">
+      <isinactive>F</isinactive>
+      <value>Connecticut</value>
+    </customvalue>
+    <customvalue scriptid="val_13318_5411584_sb1_194">
+      <isinactive>F</isinactive>
+      <value>Oregon</value>
+    </customvalue>
+    <customvalue scriptid="val_13319_5411584_sb1_937">
+      <isinactive>F</isinactive>
+      <value>South Carolina</value>
+    </customvalue>
+    <customvalue scriptid="val_13320_5411584_sb1_278">
+      <isinactive>F</isinactive>
+      <value>Kansas</value>
+    </customvalue>
+    <customvalue scriptid="val_13321_5411584_sb1_545">
+      <isinactive>F</isinactive>
+      <value>Rhode Island</value>
+    </customvalue>
+    <customvalue scriptid="val_13322_5411584_sb1_738">
+      <isinactive>F</isinactive>
+      <value>Pennsylvania</value>
+    </customvalue>
+    <customvalue scriptid="val_13323_5411584_sb1_810">
+      <isinactive>F</isinactive>
+      <value>Maine</value>
+    </customvalue>
+  </customvalues>
+</customlist>

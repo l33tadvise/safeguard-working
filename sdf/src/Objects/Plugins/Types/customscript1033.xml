@@ -1,0 +1,15 @@
+<plugintype scriptid="customscript1033">
+  <class>custom pledge revenue transaction</class>
+  <deploymentmodel>ALLOW_MULTIPLE</deploymentmodel>
+  <description></description>
+  <documentationfile></documentationfile>
+  <isinactive>T</isinactive>
+  <loglevel>DEBUG</loglevel>
+  <name>SS1.0 Custom Pledge Revenue Transaction</name>
+  <notifyadmins>F</notifyadmins>
+  <notifyemails></notifyemails>
+  <notifyowner>T</notifyowner>
+  <notifyuser>F</notifyuser>
+  <scriptfile>[/SuiteScripts/revenue_transaction_suitegl.js]</scriptfile>
+  <status>RELEASED</status>
+</plugintype>

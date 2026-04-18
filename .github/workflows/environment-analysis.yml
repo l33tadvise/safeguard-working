@@ -1,0 +1,51 @@
+name: Environment Analysis
+on:
+  push:
+    paths:
+    - 'src/**'
+  workflow_dispatch:
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Analyze Environment
+      run: |
+        echo "# NetSuite Environment Analysis" > docs/ANALYSIS.md
+        echo "**Generated:** $(date)" >> docs/ANALYSIS.md
+        echo "" >> docs/ANALYSIS.md
+        
+        # Count different script types
+        echo "## Script Types" >> docs/ANALYSIS.md
+        echo "| Type | Count |" >> docs/ANALYSIS.md
+        echo "|------|-------|" >> docs/ANALYSIS.md
+        
+        suitelet_count=$(find src -name "*.js" -exec grep -l "@NScriptType Suitelet" {} \; | wc -l)
+        ue_count=$(find src -name "*.js" -exec grep -l "@NScriptType UserEventScript" {} \; | wc -l)
+        client_count=$(find src -name "*.js" -exec grep -l "@NScriptType ClientScript" {} \; | wc -l)
+        
+        echo "| Suitelets | $suitelet_count |" >> docs/ANALYSIS.md
+        echo "| User Events | $ue_count |" >> docs/ANALYSIS.md  
+        echo "| Client Scripts | $client_count |" >> docs/ANALYSIS.md
+        
+        echo "" >> docs/ANALYSIS.md
+        
+        # List custom fields found
+        echo "## Custom Fields Detected" >> docs/ANALYSIS.md
+        if find src -name "*.js" -exec grep -o "custbody_[a-zA-Z0-9_]*" {} \; | sort | uniq | head -10 > /tmp/custfields.txt; then
+          while read field; do
+            echo "- $field" >> docs/ANALYSIS.md
+          done < /tmp/custfields.txt
+        fi
+        
+    - name: Commit Analysis
+      run: |
+        git config --local user.email "analysis@pancan.org"
+        git config --local user.name "PanCAN Analysis Bot"
+        git add docs/
+        git diff --staged --quiet || git commit -m "Updated environment analysis"
+        git push

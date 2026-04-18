@@ -1,0 +1,9 @@
+<advancedpdftemplate scriptid="custtmpl_101_5411584_sb1_163" standard="STDTMPLCUSTINVC">
+  <description></description>
+  <displaysourcecode>T</displaysourcecode>
+  <isinactive>F</isinactive>
+  <preferred>T</preferred>
+  <printtype>TRANSACTION</printtype>
+  <title>PanCAN - Invoice PDF/HTML Template WIP</title>
+  <trantype>CUSTINVC</trantype>
+</advancedpdftemplate>

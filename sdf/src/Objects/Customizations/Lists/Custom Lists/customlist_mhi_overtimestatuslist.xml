@@ -1,0 +1,16 @@
+<customlist scriptid="customlist_mhi_overtimestatuslist">
+  <description></description>
+  <isinactive>F</isinactive>
+  <isordered>T</isordered>
+  <name>Overtime Status List</name>
+  <customvalues>
+    <customvalue scriptid="val_13245_5411584_sb1_542">
+      <isinactive>F</isinactive>
+      <value>Exempt</value>
+    </customvalue>
+    <customvalue scriptid="val_13246_5411584_sb1_830">
+      <isinactive>F</isinactive>
+      <value>Non-exempt</value>
+    </customvalue>
+  </customvalues>
+</customlist>

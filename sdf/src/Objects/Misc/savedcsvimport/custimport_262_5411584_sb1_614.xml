@@ -1,0 +1,114 @@
+<savedcsvimport scriptid="custimport_262_5411584_sb1_614">
+  <charencoding>windows-1252</charencoding>
+  <columndelimiter>COMMA</columndelimiter>
+  <datahandling>ADD</datahandling>
+  <decimaldelimiter>PERIOD</decimaldelimiter>
+  <ignorereadonly>T</ignorereadonly>
+  <importname>PANCAN - Donation Cash Sales SA</importname>
+  <logsystemnotescustfields>F</logsystemnotescustfields>
+  <multiselectdelimiter>|</multiselectdelimiter>
+  <overwritemissingfields>F</overwritemissingfields>
+  <overwritesublists>F</overwritesublists>
+  <recordtype>CASHSALE</recordtype>
+  <runserversuitescript>T</runserversuitescript>
+  <transactionform>[scriptid=custform_101_5411584_sb1_280]</transactionform>
+  <usemultithread>F</usemultithread>
+  <validatemandatorycustfields>T</validatemandatorycustfields>
+  <audience>
+    <allemployees>F</allemployees>
+    <allpartners>F</allpartners>
+    <allroles>F</allroles>
+    <globaledit>F</globaledit>
+    <ispublic>F</ispublic>
+    <roles></roles>
+  </audience>
+  <filemappings>
+    <filemapping>
+      <file>CASHSALE</file>
+    </filemapping>
+  </filemappings>
+  <recordmappings>
+    <recordmapping>
+      <record>CASHSALE</record>
+      <fieldmappings>
+        <fieldmapping>
+          <field>[appid=com.netsuite.nfpfinancials, type=customsegment, scriptid=cseg_npo_restrictn]</field>
+          <value>1</value>
+        </fieldmapping>
+        <fieldmapping>
+          <field>CURRENCY</field>
+          <value>1</value>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=custbody_ext_gift_id]</field>
+          <columnreference>
+            <column>Gift ID (Invoice ID)</column>
+            <file>CASHSALE</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>ENTITY</field>
+          <columnreference>
+            <column>constituent (External ID)</column>
+            <file>CASHSALE</file>
+            <type>EXTERNAL_ID</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>EXTERNALID</field>
+          <columnreference>
+            <column>Gift ID (Invoice ID)</column>
+            <file>CASHSALE</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>HANDLINGMODE</field>
+          <value>PROCESS</value>
+        </fieldmapping>
+        <fieldmapping>
+          <field>MEMO</field>
+          <columnreference>
+            <column>Gift Batch Number (Memo)</column>
+            <file>CASHSALE</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>TRANDATE</field>
+          <columnreference>
+            <column>Post date</column>
+            <file>CASHSALE</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>UNDEPFUNDS</field>
+          <value>T</value>
+        </fieldmapping>
+      </fieldmappings>
+    </recordmapping>
+    <recordmapping>
+      <record>CASHSALE:ITEM</record>
+      <fieldmappings>
+        <fieldmapping>
+          <field>AMOUNT</field>
+          <columnreference>
+            <column>Credit amount</column>
+            <file>CASHSALE</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>ITEM</field>
+          <columnreference>
+            <column>Fund ID (Gift Designation/Item)</column>
+            <file>CASHSALE</file>
+            <type>EXTERNAL_ID</type>
+          </columnreference>
+        </fieldmapping>
+      </fieldmappings>
+    </recordmapping>
+  </recordmappings>
+</savedcsvimport>

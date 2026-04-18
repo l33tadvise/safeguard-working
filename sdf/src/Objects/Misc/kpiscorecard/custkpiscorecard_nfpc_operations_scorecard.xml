@@ -1,0 +1,189 @@
+<kpiscorecard scriptid="custkpiscorecard_nfpc_operations_scorecard">
+  <description></description>
+  <name>NFP Operations</name>
+  <useperiods>F</useperiods>
+  <custom>
+    <kpi1>[appid=com.netsuite.nfpcustomization, scriptid=customsearch_nfpc_ps_expense_kpi]</kpi1>
+    <kpi10></kpi10>
+    <kpi2>[appid=com.netsuite.nfpcustomization, scriptid=customsearch_nfpc_fr_expense_kpi]</kpi2>
+    <kpi3>[appid=com.netsuite.nfpcustomization, scriptid=customsearch_nfpc_mg_expense_kpi]</kpi3>
+    <kpi4>[appid=com.netsuite.nfpcustomization, scriptid=customsearch_nfpc_total_gift_amt_kpi]</kpi4>
+    <kpi5>[appid=com.netsuite.nfpcustomization, scriptid=customsearch_nfpc_total_pledges_kpi]</kpi5>
+    <kpi6>[appid=com.netsuite.nfpcustomization, scriptid=customsearch_nfpc_total_receivable_write]</kpi6>
+    <kpi7></kpi7>
+    <kpi8></kpi8>
+    <kpi9></kpi9>
+  </custom>
+  <audience>
+    <allemployees>F</allemployees>
+    <allpartners>F</allpartners>
+    <allroles>T</allroles>
+  </audience>
+  <kpis>
+    <kpi>
+      <comparevalueto></comparevalueto>
+      <comparewithprevious>F</comparewithprevious>
+      <comparisontype></comparisontype>
+      <hidden>F</hidden>
+      <invertcomparison>F</invertcomparison>
+      <kpi>CUSTOM</kpi>
+      <label>Program Expense</label>
+    </kpi>
+    <kpi>
+      <formula>{CUSTOM}/{EXPENSES}</formula>
+      <hidden>F</hidden>
+      <kpi>FORMULANUMERIC</kpi>
+      <label>Program Efficiency</label>
+      <lessismore>F</lessismore>
+    </kpi>
+    <kpi>
+      <comparevalueto></comparevalueto>
+      <comparewithprevious>F</comparewithprevious>
+      <comparisontype></comparisontype>
+      <hidden>F</hidden>
+      <invertcomparison>F</invertcomparison>
+      <kpi>CUSTOM2</kpi>
+      <label>Fundraising Expenses</label>
+    </kpi>
+    <kpi>
+      <formula>{CUSTOM2}/{EXPENSES}</formula>
+      <hidden>T</hidden>
+      <kpi>FORMULANUMERIC</kpi>
+      <label>Fundraising Expenses %</label>
+      <lessismore>F</lessismore>
+    </kpi>
+    <kpi>
+      <formula>{CUSTOM2}/{CUSTOM4}</formula>
+      <hidden>F</hidden>
+      <kpi>FORMULANUMERIC</kpi>
+      <label>Fundraising Efficiency</label>
+      <lessismore>F</lessismore>
+    </kpi>
+    <kpi>
+      <comparevalueto></comparevalueto>
+      <comparewithprevious>F</comparewithprevious>
+      <comparisontype></comparisontype>
+      <hidden>F</hidden>
+      <invertcomparison>F</invertcomparison>
+      <kpi>CUSTOM6</kpi>
+      <label>Pledge Write-offs</label>
+    </kpi>
+    <kpi>
+      <formula>{CUSTOM6}/{CUSTOM5}</formula>
+      <hidden>F</hidden>
+      <kpi>FORMULANUMERIC</kpi>
+      <label>Pledge Write-off Rate</label>
+      <lessismore>F</lessismore>
+    </kpi>
+  </kpis>
+  <ranges>
+    <range>
+      <comparevalueto></comparevalueto>
+      <comparewithprevious>F</comparewithprevious>
+      <comparisontype></comparisontype>
+      <invertcomparison>F</invertcomparison>
+      <label>THIS MONTH</label>
+      <range>THIS_MONTH</range>
+    </range>
+    <range>
+      <comparevalueto></comparevalueto>
+      <comparewithprevious>F</comparewithprevious>
+      <comparisontype></comparisontype>
+      <invertcomparison>F</invertcomparison>
+      <label>LAST MONTH</label>
+      <range>LAST_MONTH</range>
+    </range>
+    <range>
+      <comparevalueto></comparevalueto>
+      <comparewithprevious>F</comparewithprevious>
+      <comparisontype></comparisontype>
+      <invertcomparison>F</invertcomparison>
+      <label>SAME MONTH LAST FY</label>
+      <range>SAME_MONTH_LAST_FISCAL_YEAR</range>
+    </range>
+    <range>
+      <comparevalueto></comparevalueto>
+      <comparewithprevious>F</comparewithprevious>
+      <comparisontype></comparisontype>
+      <invertcomparison>F</invertcomparison>
+      <label>THIS YTD</label>
+      <range>THIS_FISCAL_YEAR_TO_DATE</range>
+    </range>
+    <range>
+      <comparevalueto></comparevalueto>
+      <comparewithprevious>F</comparewithprevious>
+      <comparisontype></comparisontype>
+      <invertcomparison>F</invertcomparison>
+      <label>LAST YTD</label>
+      <range>LAST_FISCAL_YEAR_TO_DATE</range>
+    </range>
+  </ranges>
+  <highlightings>
+    <highlighting>
+      <backgroundcolor>f1f1f1</backgroundcolor>
+      <bold>F</bold>
+      <condition>ALWAYS</condition>
+      <foregroundcolor></foregroundcolor>
+      <headline>F</headline>
+      <icon></icon>
+      <kpiindex>1</kpiindex>
+      <rangeindex>ALL</rangeindex>
+      <threshold></threshold>
+    </highlighting>
+    <highlighting>
+      <backgroundcolor>ffffff</backgroundcolor>
+      <bold>F</bold>
+      <condition>ALWAYS</condition>
+      <foregroundcolor></foregroundcolor>
+      <headline>T</headline>
+      <icon></icon>
+      <kpiindex>2</kpiindex>
+      <rangeindex>1</rangeindex>
+      <threshold></threshold>
+    </highlighting>
+    <highlighting>
+      <backgroundcolor>f1f1f1</backgroundcolor>
+      <bold>F</bold>
+      <condition>ALWAYS</condition>
+      <foregroundcolor></foregroundcolor>
+      <headline>F</headline>
+      <icon></icon>
+      <kpiindex>3</kpiindex>
+      <rangeindex>ALL</rangeindex>
+      <threshold></threshold>
+    </highlighting>
+    <highlighting>
+      <backgroundcolor>ffffff</backgroundcolor>
+      <bold>F</bold>
+      <condition>ALWAYS</condition>
+      <foregroundcolor></foregroundcolor>
+      <headline>T</headline>
+      <icon></icon>
+      <kpiindex>5</kpiindex>
+      <rangeindex>1</rangeindex>
+      <threshold></threshold>
+    </highlighting>
+    <highlighting>
+      <backgroundcolor>f1f1f1</backgroundcolor>
+      <bold>F</bold>
+      <condition>ALWAYS</condition>
+      <foregroundcolor></foregroundcolor>
+      <headline>F</headline>
+      <icon></icon>
+      <kpiindex>6</kpiindex>
+      <rangeindex>ALL</rangeindex>
+      <threshold></threshold>
+    </highlighting>
+    <highlighting>
+      <backgroundcolor>ffffff</backgroundcolor>
+      <bold>F</bold>
+      <condition>ALWAYS</condition>
+      <foregroundcolor></foregroundcolor>
+      <headline>T</headline>
+      <icon></icon>
+      <kpiindex>7</kpiindex>
+      <rangeindex>1</rangeindex>
+      <threshold></threshold>
+    </highlighting>
+  </highlightings>
+</kpiscorecard>

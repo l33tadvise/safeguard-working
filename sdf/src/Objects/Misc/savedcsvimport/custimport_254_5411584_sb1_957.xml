@@ -1,0 +1,142 @@
+<savedcsvimport scriptid="custimport_254_5411584_sb1_957">
+  <charencoding>windows-1252</charencoding>
+  <columndelimiter>COMMA</columndelimiter>
+  <datahandling>ADD</datahandling>
+  <decimaldelimiter>PERIOD</decimaldelimiter>
+  <ignorereadonly>T</ignorereadonly>
+  <importname>CDS Cash Sales</importname>
+  <logsystemnotescustfields>F</logsystemnotescustfields>
+  <multiselectdelimiter>|</multiselectdelimiter>
+  <overwritemissingfields>F</overwritemissingfields>
+  <overwritesublists>F</overwritesublists>
+  <recordtype>CASHSALE</recordtype>
+  <runserversuitescript>T</runserversuitescript>
+  <transactionform>[scriptid=custform_101_5411584_sb1_280]</transactionform>
+  <usemultithread>F</usemultithread>
+  <validatemandatorycustfields>T</validatemandatorycustfields>
+  <audience>
+    <allemployees>F</allemployees>
+    <allpartners>F</allpartners>
+    <allroles>F</allroles>
+    <globaledit>F</globaledit>
+    <ispublic>T</ispublic>
+    <roles></roles>
+  </audience>
+  <filemappings>
+    <filemapping>
+      <file>CASHSALE</file>
+    </filemapping>
+  </filemappings>
+  <recordmappings>
+    <recordmapping>
+      <record>CASHSALE</record>
+      <fieldmappings>
+        <fieldmapping>
+          <field>[appid=com.netsuite.nfpfinancials, type=customsegment, scriptid=cseg_npo_restrictn]</field>
+          <columnreference>
+            <column>Restriction</column>
+            <file>CASHSALE</file>
+            <type>INTERNAL_ID</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>CURRENCY</field>
+          <value>1</value>
+        </fieldmapping>
+        <fieldmapping>
+          <field>CUSTBODY2</field>
+          <columnreference>
+            <column>Payment Batch</column>
+            <file>CASHSALE</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>ENTITY</field>
+          <columnreference>
+            <column>Constituent ID</column>
+            <file>CASHSALE</file>
+            <type>INTERNAL_ID</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>EXTERNALID</field>
+          <columnreference>
+            <column>External ID</column>
+            <file>CASHSALE</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>HANDLINGMODE</field>
+          <value>PROCESS</value>
+        </fieldmapping>
+        <fieldmapping>
+          <field>TRANDATE</field>
+          <columnreference>
+            <column>Post date</column>
+            <file>CASHSALE</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>UNDEPFUNDS</field>
+          <value>T</value>
+        </fieldmapping>
+      </fieldmappings>
+    </recordmapping>
+    <recordmapping>
+      <record>CASHSALE:ITEM</record>
+      <fieldmappings>
+        <fieldmapping>
+          <field>AMOUNT</field>
+          <columnreference>
+            <column>Credit amount</column>
+            <file>CASHSALE</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[appid=com.netsuite.nfpfinancials, type=customsegment, scriptid=cseg_npo_region]</field>
+          <columnreference>
+            <column>Region Id</column>
+            <file>CASHSALE</file>
+            <type>INTERNAL_ID</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[type=customsegment, scriptid=cseg_project]</field>
+          <columnreference>
+            <column>proj ID</column>
+            <file>CASHSALE</file>
+            <type>INTERNAL_ID</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>DEPARTMENT</field>
+          <columnreference>
+            <column>Department</column>
+            <file>CASHSALE</file>
+            <type>INTERNAL_ID</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>DESCRIPTION</field>
+          <columnreference>
+            <column>Journal reference</column>
+            <file>CASHSALE</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>ITEM</field>
+          <columnreference>
+            <column>Item ID</column>
+            <file>CASHSALE</file>
+            <type>INTERNAL_ID</type>
+          </columnreference>
+        </fieldmapping>
+      </fieldmappings>
+    </recordmapping>
+  </recordmappings>
+</savedcsvimport>

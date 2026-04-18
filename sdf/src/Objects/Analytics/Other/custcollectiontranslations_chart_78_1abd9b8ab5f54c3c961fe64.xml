@@ -1,0 +1,26 @@
+<translationcollection scriptid="custcollectiontranslations_chart_78_1abd9b8ab5f54c3c961fe64">
+  <defaultlanguage>en-US</defaultlanguage>
+  <name translate="T">[scriptid=custcollectiontranslations_chart_78_1abd9b8ab5f54c3c961fe64.chart_name_445_16]</name>
+  <strings>
+    <string scriptid="chart_title_445_15">
+      <defaulttranslation>Net Assets by Program</defaulttranslation>
+      <description>Chart title</description>
+    </string>
+    <string scriptid="chart_name_445_16">
+      <defaulttranslation>Net Assets by Program</defaulttranslation>
+      <description>Chart name</description>
+    </string>
+    <string scriptid="chart_measure_445_17">
+      <defaulttranslation>Net Assets</defaulttranslation>
+      <description>Measure in chart</description>
+    </string>
+    <string scriptid="chart_legend_axis_445_18">
+      <defaulttranslation>Net Assets</defaulttranslation>
+      <description>Chart legend axis</description>
+    </string>
+    <string scriptid="chart_category_axis_445_19">
+      <defaulttranslation>Program</defaulttranslation>
+      <description>Chart category axis</description>
+    </string>
+  </strings>
+</translationcollection>

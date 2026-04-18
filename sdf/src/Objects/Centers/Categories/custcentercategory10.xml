@@ -1,0 +1,79 @@
+<centercategory scriptid="custcentercategory10">
+  <center>BASIC</center>
+  <centertab>[scriptid=custcentertab8]</centertab>
+  <label>Searches</label>
+  <links>
+    <link>
+      <linklabel>Additions</linklabel>
+      <linkobject>[scriptid=customsearch_ncfar_additions]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Disposals</linklabel>
+      <linkobject>[scriptid=customsearch_ncfar_disposals]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Asset List</linklabel>
+      <linkobject>[scriptid=customsearch_ncfar_asset_register_ss]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Asset Register</linklabel>
+      <linkobject>[scriptid=customsearch_ncfar_assetreg]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Proposal History</linklabel>
+      <linkobject>[scriptid=customsearch_ncfar_assetcreatedfrom]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Inspections Due</linklabel>
+      <linkobject>[scriptid=customsearch_nbs_far_inspectiondue]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Insurance Renewals Due</linklabel>
+      <linkobject>[scriptid=customsearch_nbs_far_insurancedue]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Expiring Leased Assets</linklabel>
+      <linkobject>[scriptid=customsearch_fam_expiring_leased_assets]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Lease Liability Details</linklabel>
+      <linkobject>[scriptid=customsearch_fam_leaseliabdetail]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Right-of-Use Asset Listing</linklabel>
+      <linkobject>[scriptid=customsearch_fam_rou_assetlisting]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Short Term Lease Liabilities</linklabel>
+      <linkobject>[scriptid=customsearch_fam_shortterm_leaseliab]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Long Term Lease Liabilities</linklabel>
+      <linkobject>[scriptid=customsearch_fam_longterm_leaseliab]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

@@ -1,0 +1,49 @@
+<centercategory scriptid="custcentercategory11">
+  <center>BASIC</center>
+  <centertab>[scriptid=custcentertab8]</centertab>
+  <label>Setup</label>
+  <links>
+    <link>
+      <linklabel>System Setup</linklabel>
+      <linkobject>[scriptid=customscript_fam_systemsetup_su.customdeploy_fam_systemsetup_su]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Asset Transfer Accounts</linklabel>
+      <linkobject>[scriptid=customrecord_ncfar_transferaccounts]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Asset Types</linklabel>
+      <linkobject>[scriptid=customrecord_ncfar_assettype]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Depreciation Methods</linklabel>
+      <linkobject>[scriptid=customrecord_ncfar_deprmethod]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Alternate Methods</linklabel>
+      <linkobject>[scriptid=customrecord_ncfar_altmethods]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Transaction Field Map</linklabel>
+      <linkobject>[scriptid=customrecord_fam_tpaf_mapping]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Delete Assets</linklabel>
+      <linkobject>[scriptid=customscript_fam_deleteasset_su.customdeploy_fam_deleteasset_su]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

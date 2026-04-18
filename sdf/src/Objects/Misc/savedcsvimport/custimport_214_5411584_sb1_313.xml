@@ -1,0 +1,177 @@
+<savedcsvimport scriptid="custimport_214_5411584_sb1_313">
+  <charencoding>windows-1252</charencoding>
+  <columndelimiter>COMMA</columndelimiter>
+  <datahandling>ADD</datahandling>
+  <decimaldelimiter>PERIOD</decimaldelimiter>
+  <entryform>[scriptid=custform_98_5411584_205]</entryform>
+  <ignorereadonly>T</ignorereadonly>
+  <importname>PanCAN|Employee Import</importname>
+  <logsystemnotescustfields>F</logsystemnotescustfields>
+  <multiselectdelimiter>|</multiselectdelimiter>
+  <overwritemissingfields>F</overwritemissingfields>
+  <overwritesublists>F</overwritesublists>
+  <recordtype>EMPLOYEE</recordtype>
+  <runserversuitescript>F</runserversuitescript>
+  <usemultithread>F</usemultithread>
+  <validatemandatorycustfields>T</validatemandatorycustfields>
+  <audience>
+    <allemployees>F</allemployees>
+    <allpartners>F</allpartners>
+    <allroles>F</allroles>
+    <globaledit>F</globaledit>
+    <ispublic>T</ispublic>
+    <roles></roles>
+  </audience>
+  <filemappings>
+    <filemapping>
+      <file>EMPLOYEE</file>
+    </filemapping>
+  </filemappings>
+  <recordmappings>
+    <recordmapping>
+      <record>EMPLOYEE</record>
+      <fieldmappings>
+        <fieldmapping>
+          <field>[scriptid=custentity_mhi_employeelocation]</field>
+          <columnreference>
+            <column>_Location</column>
+            <file>EMPLOYEE</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=custentity_mhi_employmentstatusdate]</field>
+          <columnreference>
+            <column>_Employment Status Date</column>
+            <file>EMPLOYEE</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=custentity_mhi_incentiveplanlevel]</field>
+          <columnreference>
+            <column>Incentive Plan Level</column>
+            <file>EMPLOYEE</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=custentity_mhi_overtime_status]</field>
+          <columnreference>
+            <column>_Overtime Status</column>
+            <file>EMPLOYEE</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=custentity_mhi_phoneallowance]</field>
+          <columnreference>
+            <column>_Phone Allowance</column>
+            <file>EMPLOYEE</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=custentity_mhi_stretch_bonus]</field>
+          <columnreference>
+            <column>_Stretch Bonus</column>
+            <file>EMPLOYEE</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>DEPARTMENT</field>
+          <columnreference>
+            <column>Department Code</column>
+            <file>EMPLOYEE</file>
+            <type>EXTERNAL_ID</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>EMPLOYEESTATUS</field>
+          <columnreference>
+            <column>_Status</column>
+            <file>EMPLOYEE</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>EMPLOYEETYPE</field>
+          <columnreference>
+            <column>_Employment Status</column>
+            <file>EMPLOYEE</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>ENTITYID</field>
+          <columnreference>
+            <column>_Employee #</column>
+            <file>EMPLOYEE</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>EXTERNALID</field>
+          <columnreference>
+            <column>_Employee #</column>
+            <file>EMPLOYEE</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>FIRSTNAME</field>
+          <columnreference>
+            <column>_First Name</column>
+            <file>EMPLOYEE</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>HIREDATE</field>
+          <columnreference>
+            <column>_Hire Date</column>
+            <file>EMPLOYEE</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>LABORCOST</field>
+          <columnreference>
+            <column>_Pay Rate</column>
+            <file>EMPLOYEE</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>LASTNAME</field>
+          <columnreference>
+            <column>_Last Name</column>
+            <file>EMPLOYEE</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>MIDDLENAME</field>
+          <columnreference>
+            <column>_Middle Name</column>
+            <file>EMPLOYEE</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>SUBSIDIARY</field>
+          <value>2</value>
+        </fieldmapping>
+        <fieldmapping>
+          <field>TITLE</field>
+          <columnreference>
+            <column>_Job Title</column>
+            <file>EMPLOYEE</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+      </fieldmappings>
+    </recordmapping>
+  </recordmappings>
+</savedcsvimport>

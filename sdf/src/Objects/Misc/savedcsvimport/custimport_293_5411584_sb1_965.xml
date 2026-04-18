@@ -1,0 +1,77 @@
+<savedcsvimport scriptid="custimport_293_5411584_sb1_965">
+  <charencoding>windows-1252</charencoding>
+  <columndelimiter>COMMA</columndelimiter>
+  <datahandling>ADD</datahandling>
+  <decimaldelimiter>PERIOD</decimaldelimiter>
+  <ignorereadonly>T</ignorereadonly>
+  <importname>FB Payments </importname>
+  <logsystemnotescustfields>F</logsystemnotescustfields>
+  <multiselectdelimiter>|</multiselectdelimiter>
+  <overwritemissingfields>F</overwritemissingfields>
+  <overwritesublists>F</overwritesublists>
+  <recordtype>CUSTOMERPAYMENT</recordtype>
+  <runserversuitescript>T</runserversuitescript>
+  <transactionform>[appid=com.netsuite.nfpcustomization, scriptid=custform_103_5411584_sb1_327]</transactionform>
+  <usemultithread>F</usemultithread>
+  <validatemandatorycustfields>T</validatemandatorycustfields>
+  <audience>
+    <allemployees>F</allemployees>
+    <allpartners>F</allpartners>
+    <allroles>F</allroles>
+    <globaledit>F</globaledit>
+    <ispublic>F</ispublic>
+    <roles></roles>
+  </audience>
+  <filemappings>
+    <filemapping>
+      <file>CUSTOMERPAYMENT</file>
+    </filemapping>
+  </filemappings>
+  <recordmappings>
+    <recordmapping>
+      <record>CUSTOMERPAYMENT</record>
+      <fieldmappings>
+        <fieldmapping>
+          <field>AUTOAPPLY</field>
+          <value>T</value>
+        </fieldmapping>
+        <fieldmapping>
+          <field>CUSTOMER</field>
+          <value>1264</value>
+        </fieldmapping>
+        <fieldmapping>
+          <field>EXTERNALID</field>
+          <columnreference>
+            <column>Transaction ID</column>
+            <file>CUSTOMERPAYMENT</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>HANDLINGMODE</field>
+          <value>PROCESS</value>
+        </fieldmapping>
+        <fieldmapping>
+          <field>PAYMENT</field>
+          <columnreference>
+            <column>Gross Amount</column>
+            <file>CUSTOMERPAYMENT</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>TRANDATE</field>
+          <columnreference>
+            <column>Donation Date</column>
+            <file>CUSTOMERPAYMENT</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>UNDEPFUNDS</field>
+          <value>T</value>
+        </fieldmapping>
+      </fieldmappings>
+    </recordmapping>
+  </recordmappings>
+</savedcsvimport>

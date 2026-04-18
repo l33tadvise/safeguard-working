@@ -1,0 +1,19 @@
+<centercategory scriptid="custcentercategory3_2">
+  <center>ACCOUNTCENTER</center>
+  <centertab>[scriptid=custcentertab7]</centertab>
+  <label>Background Processing</label>
+  <links>
+    <link>
+      <linklabel>FAM Process List</linklabel>
+      <linkobject>[scriptid=customrecord_fam_process]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Status</linklabel>
+      <linkobject>[scriptid=customscript_fam_fprsummary_su.customdeploy_fam_fprsummary_su]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

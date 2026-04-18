@@ -1,0 +1,22 @@
+name: Cleanup once
+on: workflow_dispatch
+permissions:
+  contents: write
+
+jobs:
+  clean:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Remove stray root files
+        run: |
+          git rm -f suitecloud.config.js || true
+          # Optional: if you want only one .gitignore, keep the root one
+          # git rm -f sdf/.gitignore || true
+          git commit -m "One-time cleanup: remove stray root files" || echo "Nothing to commit"
+          git push || (
+            # Branch protection? push to a branch and PR
+            git checkout -b cleanup/delete-root-config
+            git push -u origin cleanup/delete-root-config
+            echo "Pushed branch cleanup/delete-root-config; open a PR and merge."
+          )

@@ -1,0 +1,5 @@
+<subtab scriptid="custtab_dm_soft_credit">
+  <parent></parent>
+  <tabtype>TRANSACTION</tabtype>
+  <title>Soft Credits</title>
+</subtab>

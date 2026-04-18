@@ -1,0 +1,25 @@
+<centercategory scriptid="custcentercategory30">
+  <center>BASIC</center>
+  <centertab>BASICCENTERTRANSACTIONS</centertab>
+  <label>Pledge Rev Ops</label>
+  <links>
+    <link>
+      <linklabel>1. Create Pledge Revenue</linklabel>
+      <linkobject>[scriptid=customscript_bulk_processing_sl.customdeploy_bulk_po_revenue_processing]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>2. Post Pledge Revenue</linklabel>
+      <linkobject>[scriptid=customscript_bulk_revenue_trans_sl.customdeploy_bulk_revenue_trans_sl]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>3. Invoice Pledge Schedules</linklabel>
+      <linkobject>[scriptid=customscript_bulk_pledge_invoice_sl.customdeploy3]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

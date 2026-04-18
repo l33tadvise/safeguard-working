@@ -1,0 +1,22 @@
+<restlet scriptid="customscript_vena_uniquekey">
+  <description></description>
+  <isinactive>F</isinactive>
+  <name>Vena Unique Key RESTlet Script</name>
+  <notifyadmins>F</notifyadmins>
+  <notifyemails></notifyemails>
+  <notifyowner>T</notifyowner>
+  <notifyuser>F</notifyuser>
+  <scriptfile>[/SuiteBundles/Bundle 315424/venaNetSuiteUniqueKeyRestlet.js]</scriptfile>
+  <scriptdeployments>
+    <scriptdeployment scriptid="customdeploy_vena_uniquekey">
+      <allemployees>T</allemployees>
+      <allpartners>F</allpartners>
+      <allroles>T</allroles>
+      <audslctrole>EMPLOYEE_CENTER|NETSUITE_SUPPORT_CENTER|NETSUITE_SUPPORT_CENTER__BASIC|VENDOR_CENTER</audslctrole>
+      <isdeployed>T</isdeployed>
+      <loglevel>ERROR</loglevel>
+      <status>RELEASED</status>
+      <title>Vena Unique Key RESTlet Script</title>
+    </scriptdeployment>
+  </scriptdeployments>
+</restlet>

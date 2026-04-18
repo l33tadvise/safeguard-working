@@ -1,0 +1,22 @@
+<restlet scriptid="customscript_acom_rest_connector">
+  <description></description>
+  <isinactive>F</isinactive>
+  <name>ApproveCOM.Rest.Connector</name>
+  <notifyadmins>F</notifyadmins>
+  <notifyemails></notifyemails>
+  <notifyowner>T</notifyowner>
+  <notifyuser>F</notifyuser>
+  <scriptfile>[/SuiteBundles/Bundle 416219/ApproveCOM/App.Connector/App.Rest.Connector.js]</scriptfile>
+  <scriptdeployments>
+    <scriptdeployment scriptid="customdeploy_acom_rest_connector">
+      <allemployees>F</allemployees>
+      <allpartners>F</allpartners>
+      <allroles>T</allroles>
+      <audslctrole>EMPLOYEE_CENTER|NETSUITE_SUPPORT_CENTER|NETSUITE_SUPPORT_CENTER__BASIC|VENDOR_CENTER</audslctrole>
+      <isdeployed>T</isdeployed>
+      <loglevel>ERROR</loglevel>
+      <status>RELEASED</status>
+      <title>ApproveCOM.Rest.Connector</title>
+    </scriptdeployment>
+  </scriptdeployments>
+</restlet>

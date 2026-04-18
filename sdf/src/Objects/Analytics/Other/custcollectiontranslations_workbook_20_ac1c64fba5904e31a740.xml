@@ -1,0 +1,14 @@
+<translationcollection scriptid="custcollectiontranslations_workbook_20_ac1c64fba5904e31a740">
+  <defaultlanguage>en-US</defaultlanguage>
+  <name translate="T">[scriptid=custcollectiontranslations_workbook_20_ac1c64fba5904e31a740.workbook_name_445_1]</name>
+  <strings>
+    <string scriptid="workbook_name_445_1">
+      <defaulttranslation>Net Assets by Program</defaulttranslation>
+      <description>Name in workbook</description>
+    </string>
+    <string scriptid="workbook_description_445_2">
+      <defaulttranslation>This workbook shows the program revenue, expense, and net assets. It includes the pivots by subsidiary and accounts as well as graphical visualization of this data.</defaulttranslation>
+      <description>Description of a workbook</description>
+    </string>
+  </strings>
+</translationcollection>

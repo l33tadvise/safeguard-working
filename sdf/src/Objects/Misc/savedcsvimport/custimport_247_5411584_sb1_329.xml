@@ -1,0 +1,126 @@
+<savedcsvimport scriptid="custimport_247_5411584_sb1_329">
+  <charencoding>windows-1252</charencoding>
+  <columndelimiter>COMMA</columndelimiter>
+  <datahandling>ADD</datahandling>
+  <decimaldelimiter>PERIOD</decimaldelimiter>
+  <ignorereadonly>T</ignorereadonly>
+  <importname>Payment + Application Import</importname>
+  <logsystemnotescustfields>F</logsystemnotescustfields>
+  <multiselectdelimiter>|</multiselectdelimiter>
+  <overwritemissingfields>F</overwritemissingfields>
+  <overwritesublists>F</overwritesublists>
+  <recordtype>CUSTOMERPAYMENT</recordtype>
+  <runserversuitescript>T</runserversuitescript>
+  <transactionform>[appid=com.netsuite.nfpcustomization, scriptid=custform_103_5411584_sb1_327]</transactionform>
+  <usemultithread>F</usemultithread>
+  <validatemandatorycustfields>T</validatemandatorycustfields>
+  <audience>
+    <allemployees>F</allemployees>
+    <allpartners>F</allpartners>
+    <allroles>F</allroles>
+    <globaledit>F</globaledit>
+    <ispublic>T</ispublic>
+    <roles></roles>
+  </audience>
+  <filemappings>
+    <filemapping>
+      <file>CUSTOMERPAYMENT</file>
+    </filemapping>
+  </filemappings>
+  <recordmappings>
+    <recordmapping>
+      <record>CUSTOMERPAYMENT:APPLY</record>
+      <fieldmappings>
+        <fieldmapping>
+          <field>AMOUNT</field>
+          <columnreference>
+            <column>Gross amount</column>
+            <file>CUSTOMERPAYMENT</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>DOC</field>
+          <columnreference>
+            <column>Transaction ID</column>
+            <file>CUSTOMERPAYMENT</file>
+            <type>EXTERNAL_ID</type>
+          </columnreference>
+        </fieldmapping>
+      </fieldmappings>
+    </recordmapping>
+    <recordmapping>
+      <record>CUSTOMERPAYMENT</record>
+      <fieldmappings>
+        <fieldmapping>
+          <field>[appid=com.netsuite.nfpfinancials, type=customsegment, scriptid=cseg_npo_restrictn]</field>
+          <value>1</value>
+        </fieldmapping>
+        <fieldmapping>
+          <field>CUSTBODY2</field>
+          <columnreference>
+            <column>Batch</column>
+            <file>CUSTOMERPAYMENT</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=custbody_ext_gift_id]</field>
+          <columnreference>
+            <column>Gift ID</column>
+            <file>CUSTOMERPAYMENT</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=custbody_ext_transaction_id]</field>
+          <columnreference>
+            <column>Transaction ID</column>
+            <file>CUSTOMERPAYMENT</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>CUSTOMER</field>
+          <value>1040</value>
+        </fieldmapping>
+        <fieldmapping>
+          <field>EXTERNALID</field>
+          <columnreference>
+            <column>External ID</column>
+            <file>CUSTOMERPAYMENT</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>HANDLINGMODE</field>
+          <value>PROCESS</value>
+        </fieldmapping>
+        <fieldmapping>
+          <field>MEMO</field>
+          <columnreference>
+            <column>Account holder</column>
+            <file>CUSTOMERPAYMENT</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>PAYMENT</field>
+          <columnreference>
+            <column>Gross amount</column>
+            <file>CUSTOMERPAYMENT</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>TRANDATE</field>
+          <columnreference>
+            <column>Disbursement date</column>
+            <file>CUSTOMERPAYMENT</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+      </fieldmappings>
+    </recordmapping>
+  </recordmappings>
+</savedcsvimport>

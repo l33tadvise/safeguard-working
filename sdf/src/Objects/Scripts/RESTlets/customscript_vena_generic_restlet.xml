@@ -1,0 +1,26 @@
+<restlet scriptid="customscript_vena_generic_restlet">
+  <deletefunction></deletefunction>
+  <description></description>
+  <getfunction>get</getfunction>
+  <isinactive>F</isinactive>
+  <name>Vena Generic RESTlet Script</name>
+  <notifyadmins>F</notifyadmins>
+  <notifyemails></notifyemails>
+  <notifyowner>F</notifyowner>
+  <notifyuser>F</notifyuser>
+  <postfunction></postfunction>
+  <putfunction></putfunction>
+  <scriptfile>[/SuiteBundles/Bundle 315424/venaNetSuiteRestlet.js]</scriptfile>
+  <scriptdeployments>
+    <scriptdeployment scriptid="customdeploy_vena_generic_restlet">
+      <allemployees>T</allemployees>
+      <allpartners>F</allpartners>
+      <allroles>T</allroles>
+      <audslctrole>EMPLOYEE_CENTER|NETSUITE_SUPPORT_CENTER|NETSUITE_SUPPORT_CENTER__BASIC|VENDOR_CENTER</audslctrole>
+      <isdeployed>T</isdeployed>
+      <loglevel>AUDIT</loglevel>
+      <status>RELEASED</status>
+      <title>Vena Generic RESTlet Script</title>
+    </scriptdeployment>
+  </scriptdeployments>
+</restlet>

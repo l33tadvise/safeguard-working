@@ -1,0 +1,19 @@
+<centercategory scriptid="custcentercategory_nfp_const_mgmt_classic">
+  <center>BASIC</center>
+  <centertab>[scriptid=custcentertab_nfp_crm_center_classic]</centertab>
+  <label>Constituent Management</label>
+  <links>
+    <link>
+      <linklabel>Constituent Relationship</linklabel>
+      <linkobject>[scriptid=customrecord_dm_constituent_relationship]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Relationship Report</linklabel>
+      <linkobject>[scriptid=customscript_dm_sl_relationship_report.customdeploy_dm_sl_relationship_report]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

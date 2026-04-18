@@ -1,0 +1,22 @@
+<restlet scriptid="customscript_csv_export">
+  <description></description>
+  <isinactive>F</isinactive>
+  <name>_csv_export</name>
+  <notifyadmins>F</notifyadmins>
+  <notifyemails></notifyemails>
+  <notifyowner>T</notifyowner>
+  <notifyuser>F</notifyuser>
+  <scriptfile>[/SuiteScripts/netsuite_csv_restlet.js]</scriptfile>
+  <scriptdeployments>
+    <scriptdeployment scriptid="customdeploy_csv_export">
+      <allemployees>F</allemployees>
+      <allpartners>F</allpartners>
+      <allroles>F</allroles>
+      <audslctrole>ADMINISTRATOR</audslctrole>
+      <isdeployed>T</isdeployed>
+      <loglevel>DEBUG</loglevel>
+      <status>RELEASED</status>
+      <title>_csv_export</title>
+    </scriptdeployment>
+  </scriptdeployments>
+</restlet>

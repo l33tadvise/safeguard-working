@@ -1,0 +1,48 @@
+<customtransactiontype scriptid="customsale_pledge_revenue_posting">
+  <cancloseorder>F</cancloseorder>
+  <iscredit>F</iscredit>
+  <isposting>F</isposting>
+  <isvoidable>F</isvoidable>
+  <name>Pledge Order Revenue Posting</name>
+  <showstatus>T</showstatus>
+  <transactionstyle>SALES</transactionstyle>
+  <accounting>
+    <filterbyaccounttype>ACCTREC|OTHASSET|OTHCURRASSET</filterbyaccounttype>
+    <filterbyaccounttypeall>F</filterbyaccounttypeall>
+    <specifyaccountontransaction>T</specifyaccountontransaction>
+  </accounting>
+  <statuses>
+    <status scriptid="status_10040_5411584_sb1_732">
+      <description>Pending Approval</description>
+      <id>A</id>
+      <isposting>F</isposting>
+    </status>
+    <status scriptid="status_10041_5411584_sb1_461">
+      <description>Revenue Posted</description>
+      <id>B</id>
+      <isposting>T</isposting>
+    </status>
+    <status scriptid="status_10042_5411584_sb1_957">
+      <description>Voided</description>
+      <id>C</id>
+      <isposting>F</isposting>
+    </status>
+  </statuses>
+  <permissions>
+    <permission>
+      <permittedlevel>FULL</permittedlevel>
+      <permittedrole>ADMINISTRATOR</permittedrole>
+    </permission>
+    <permission>
+      <permittedlevel>FULL</permittedlevel>
+      <permittedrole>[scriptid=customrole1138]</permittedrole>
+    </permission>
+  </permissions>
+  <links>
+    <link>
+      <linkcategory>BASICTRANSACTIONSSALES</linkcategory>
+      <linklabel>Pledge Revenue</linklabel>
+      <linktasktype>LIST</linktasktype>
+    </link>
+  </links>
+</customtransactiontype>

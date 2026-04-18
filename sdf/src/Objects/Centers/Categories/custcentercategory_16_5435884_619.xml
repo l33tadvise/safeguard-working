@@ -1,0 +1,37 @@
+<centercategory scriptid="custcentercategory_16_5435884_619">
+  <center>ACCOUNTCENTER</center>
+  <centertab>[scriptid=custcentertab7]</centertab>
+  <label>Leases</label>
+  <links>
+    <link>
+      <linklabel>Lease</linklabel>
+      <linkobject>[scriptid=customtransaction_fam_leaseproposal]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Generate Lease Schedules</linklabel>
+      <linkobject>[scriptid=customscript_fam_generateleasesched_su.customdeploy_fam_gensched_su]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Record Lease Interest</linklabel>
+      <linkobject>[scriptid=customscript_fam_recognizeleaseint_su.customdeploy_fam_recognizeleaseint_su]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Finalize Migrated Leases</linklabel>
+      <linkobject>[scriptid=customscript_fam_finalizeleaseprop_su.customdeploy_fam_finalizeleaseprop_su]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Lease Modification</linklabel>
+      <linkobject>[scriptid=customscript_fam_leasemodification_su.customdeploy_fam_leasemodification_su]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

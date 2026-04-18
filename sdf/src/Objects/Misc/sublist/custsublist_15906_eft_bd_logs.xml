@@ -1,0 +1,13 @@
+<sublist scriptid="custsublist_15906_eft_bd_logs">
+  <contact>F</contact>
+  <customer>F</customer>
+  <employee>T</employee>
+  <field></field>
+  <job>F</job>
+  <label translate="T">[scriptid=custcollection_electronic_payments_objects_translations.label_custsublist_15906_eft_bd_logs]</label>
+  <partner>T</partner>
+  <savedsearch>[scriptid=customsearch_15906_eft_bd_ep_logs]</savedsearch>
+  <sublisttype>ENTITY</sublisttype>
+  <tab>[scriptid=custtab_10_4533432_230]</tab>
+  <vendor>T</vendor>
+</sublist>

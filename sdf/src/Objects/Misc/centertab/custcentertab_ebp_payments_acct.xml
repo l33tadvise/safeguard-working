@@ -1,0 +1,22 @@
+<centertab scriptid="custcentertab_ebp_payments_acct">
+  <allcustomers>F</allcustomers>
+  <allemployees>F</allemployees>
+  <allpartners>F</allpartners>
+  <allroles>T</allroles>
+  <allvendors>F</allvendors>
+  <audslctrole></audslctrole>
+  <center>ACCOUNTCENTER</center>
+  <label translate="T">[scriptid=custcollection_electronic_payments_objects_translations.label_custcentertab_ebp_payments_acct]</label>
+  <portlets>
+    <portlet scriptid="portlet_8_4533432_377">
+      <isportletshown>T</isportletshown>
+      <portlet>SCRIPTPORTLET</portlet>
+      <portletcolumn>2</portletcolumn>
+    </portlet>
+    <portlet scriptid="portlet_35_9207237_298">
+      <isportletshown>T</isportletshown>
+      <portlet>SCRIPTPORTLET</portlet>
+      <portletcolumn>2</portletcolumn>
+    </portlet>
+  </portlets>
+</centertab>

@@ -1,0 +1,26 @@
+<translationcollection scriptid="custcollectiontranslations_pivot_82_192baa6ba2594ab5a9a57c8">
+  <defaultlanguage>en-US</defaultlanguage>
+  <name translate="T">[scriptid=custcollectiontranslations_pivot_82_192baa6ba2594ab5a9a57c8.report_name_445_14]</name>
+  <strings>
+    <string scriptid="report_measure_445_9">
+      <defaulttranslation>Total Expenses</defaulttranslation>
+      <description>Measure in pivot</description>
+    </string>
+    <string scriptid="report_measure_445_10">
+      <defaulttranslation>Total Revenue </defaulttranslation>
+      <description>Measure in pivot</description>
+    </string>
+    <string scriptid="report_measure_445_11">
+      <defaulttranslation>Net Assets</defaulttranslation>
+      <description>Measure in pivot</description>
+    </string>
+    <string scriptid="report_measure_445_13">
+      <defaulttranslation>Revenue Released</defaulttranslation>
+      <description>Measure in pivot</description>
+    </string>
+    <string scriptid="report_name_445_14">
+      <defaulttranslation>Net Assets by Program Grouped by Accounts</defaulttranslation>
+      <description>Name of pivot</description>
+    </string>
+  </strings>
+</translationcollection>

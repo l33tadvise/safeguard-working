@@ -1,0 +1,31 @@
+<centercategory scriptid="custcentercategory15">
+  <center>BASIC</center>
+  <centertab>[scriptid=custcentertab8]</centertab>
+  <label>Journal Types</label>
+  <links>
+    <link>
+      <linklabel>Depreciation Entries</linklabel>
+      <linkobject>[scriptid=customtransaction_fam_depr_jrn]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Revaluation Entries</linklabel>
+      <linkobject>[scriptid=customtransaction_fam_revaluation_jrn]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Disposal Entries</linklabel>
+      <linkobject>[scriptid=customtransaction_fam_disp_jrn]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Transfer Entries</linklabel>
+      <linkobject>[scriptid=customtransaction_fam_transfer_jrn]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

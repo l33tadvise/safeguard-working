@@ -1,0 +1,10 @@
+<translationcollection scriptid="custcollectiontranslations_dataset_28_1ee880505f264587816f5">
+  <defaultlanguage>en-US</defaultlanguage>
+  <name translate="T">[scriptid=custcollectiontranslations_dataset_28_1ee880505f264587816f5.dataset_name_484_1]</name>
+  <strings>
+    <string scriptid="dataset_name_484_1">
+      <defaulttranslation>PANCAN | Expenses by Functional Expense</defaulttranslation>
+      <description>Name in dataset</description>
+    </string>
+  </strings>
+</translationcollection>

@@ -1,0 +1,338 @@
+name: NetSuite Environment Backup (Menu-Sorted)
+
+on:
+  schedule:
+    - cron: '0 6 * * *'   # Daily 6 AM UTC
+  workflow_dispatch:
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    env:
+      # Required
+      NS_ACCOUNT_ID: ${{ secrets.NS_ACCOUNT_ID }}
+      NS_CERTIFICATE_ID: ${{ secrets.NS_CERTIFICATE_ID }}
+      NETSUITE_PRIVATE_KEY_BASE64: ${{ secrets.NETSUITE_PRIVATE_KEY_BASE64 }}
+      SUITECLOUD_CI_PASSKEY: ${{ secrets.SUITECLOUD_CI_PASSKEY }}
+      # Optional
+      NS_DOMAIN: ${{ secrets.NS_DOMAIN }}
+      NS_FILE_PATHS: ${{ secrets.NS_FILE_PATHS }} # comma list; leave UNSET to skip file-cabinet
+      SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+      # Fixed
+      SUITECLOUD_CI: "1"
+      PROJECT_DIR: sdf
+      TMP_DIR: /tmp/ns_backup
+      LOG_PATH: ${{ github.workspace }}/reports/import.log
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install SuiteCloud CLI
+        run: npm i -g @oracle/suitecloud-cli@latest --acceptsuitecloudsdklicense
+
+      - name: Decode private key (PKCS#8)
+        shell: bash
+        run: |
+          printf "%s" "$NETSUITE_PRIVATE_KEY_BASE64" | base64 -d > /tmp/private.pem
+          sed -i 's/\r$//' /tmp/private.pem || true
+          chmod 600 /tmp/private.pem
+          head -n1 /tmp/private.pem | grep -q "BEGIN PRIVATE KEY" || (echo "Private key must be PKCS#8"; exit 1)
+          openssl pkey -in /tmp/private.pem -check -noout && echo "Key is valid"
+
+      - name: Build temp project & import (objects first; optional files)
+        id: import
+        shell: bash
+        continue-on-error: true
+        run: |
+          set -euo pipefail
+          mkdir -p "$(dirname "$LOG_PATH")"
+          : > "$LOG_PATH"
+
+          retry() { # retry <max> <cmd...>
+            local max=$1; shift; local n=1
+            until "$@" 2>&1 | tee -a "$LOG_PATH"; do
+              if [ $n -ge $max ]; then
+                echo "Retry: giving up after $n attempts" | tee -a "$LOG_PATH"
+                return 1
+              fi
+              sleep $((2**n)); n=$((n+1))
+              echo "Retry: attempt $n/$max — $*" | tee -a "$LOG_PATH"
+            done
+          }
+
+          rm -rf "$TMP_DIR"; mkdir -p "$TMP_DIR"; cd "$TMP_DIR"
+          suitecloud project:create --projectname proj --type ACCOUNTCUSTOMIZATION 2>&1 | tee -a "$LOG_PATH"
+          cd proj
+
+          DOMAIN_FLAG=""; [ -n "${NS_DOMAIN:-}" ] && DOMAIN_FLAG="--domain $NS_DOMAIN"
+          suitecloud account:setup:ci \
+            --account "$NS_ACCOUNT_ID" \
+            --authid github-backup \
+            --certificateid "$NS_CERTIFICATE_ID" \
+            --privatekeypath /tmp/private.pem \
+            $DOMAIN_FLAG 2>&1 | tee -a "$LOG_PATH"
+
+          echo "Importing ALL objects to /Objects…" | tee -a "$LOG_PATH"
+          if ! retry 3 suitecloud object:import --type ALL --scriptid ALL --destinationfolder "/Objects"; then
+            echo "ALL import failed; trying per-type fallback…" | tee -a "$LOG_PATH"
+            TYPES=(advancedpdftemplate bundleinstallationscript center centertab centercategory centerlink centerscript
+                   clientscript restlet mapreducescript scheduledscript suitelet usereventscript workflow
+                   sdfinstallationscript portlet plugintype pluginimplementation customglplugin
+                   customrecordtype customlist customsegment customtransactiontype typecustomization
+                   entitycustomfield itemcustomfield crmcustomfield transactionbodycustomfield transactioncolumncustomfield
+                   customrecordcustomfield othercustomfield role emailtemplate financiallayout publisheddashboard
+                   reportdefinition dataset workbook chart translationcollection csvimport integration
+                   entryform transactionform)
+            for T in "${TYPES[@]}"; do
+              retry 2 suitecloud object:import --type "$T" --scriptid ALL --destinationfolder "/Objects" || true
+            done
+          fi
+
+          # ---- File Cabinet (only if you provided NS_FILE_PATHS) ----
+          if [ -n "${NS_FILE_PATHS:-}" ]; then
+            IFS=',' read -ra PATHS <<< "$NS_FILE_PATHS"
+            for P in "${PATHS[@]}"; do
+              P_TRIMMED="$(echo "$P" | xargs)"
+              case "$P_TRIMMED" in
+                "/SuiteScripts"|"/Templates/E-mail Templates"|"/Templates/Marketing Templates"|"/Web Site Hosting Files")
+                  retry 2 suitecloud file:import --paths "$P_TRIMMED" || true
+                  ;;
+                "")
+                  ;;
+                *)
+                  echo "Skipped invalid File Cabinet root: $P_TRIMMED" | tee -a "$LOG_PATH"
+                  ;;
+              esac
+            done
+          else
+            echo "NS_FILE_PATHS not set; skipping File Cabinet import." | tee -a "$LOG_PATH"
+          fi
+
+          ROOT="$PWD/src/Objects"; mkdir -p "$ROOT"
+
+          map_path () {
+            case "$1" in
+              transactionbodycustomfield)   echo "Customizations/Fields/Transaction Body";;
+              transactioncolumncustomfield) echo "Customizations/Fields/Transaction Column";;
+              entitycustomfield)            echo "Customizations/Fields/Entity";;
+              itemcustomfield)              echo "Customizations/Fields/Item";;
+              crmcustomfield)               echo "Customizations/Fields/CRM";;
+              customrecordcustomfield)      echo "Customizations/Fields/Custom Record";;
+              customrecordtype)             echo "Customizations/Records/Custom Records";;
+              customtransactiontype)        echo "Customizations/Records/Custom Transaction Types";;
+              customlist)                   echo "Customizations/Lists/Custom Lists";;
+              customsegment)                echo "Customizations/Lists/Custom Segments";;
+              typecustomization)            echo "Customizations/Type Customizations";;
+              entryform|entryForm)          echo "Forms/Entry Forms";;
+              transactionform|transactionForm) echo "Forms/Transaction Forms";;
+              workflow)                     echo "Automation/Workflows";;
+              workflowactionscript)         echo "Scripts/Workflow Action Scripts";;
+              clientscript)                 echo "Scripts/Client Scripts";;
+              restlet)                      echo "Scripts/RESTlets";;
+              mapreducescript)              echo "Scripts/MapReduce Scripts";;
+              scheduledscript)              echo "Scripts/Scheduled Scripts";;
+              sdfinstallationscript)        echo "Scripts/SDF Installation Scripts";;
+              portlet)                      echo "Scripts/Portlets";;
+              plugintype)                   echo "Plugins/Types";;
+              pluginimplementation)         echo "Plugins/Implementations";;
+              customglplugin)               echo "Accounting/GL Plugins";;
+              role)                         echo "Security/Roles";;
+              centerscript)                 echo "Centers/Scripts";;
+              centercategory)               echo "Centers/Categories";;
+              centerlink)                   echo "Centers/Links";;
+              savedsearch)                  echo "Analytics/Saved Searches";;
+              dataset|workbook|chart|translationcollection|translations)
+                                          echo "Analytics/Other";;
+              csvimport)                    echo "Admin/CSV Imports";;
+              integration)                  echo "Admin/Integrations";;
+              *)                            echo "Misc/$1";;
+            esac
+          }
+
+          shopt -s globstar nullglob
+          for f in "$ROOT"/**/*.xml "$ROOT"/*.xml; do
+            [ -f "$f" ] || continue
+            t=$(awk '{gsub(/\r/,""); if ($0 ~ /^<\?xml/) next; if (match($0, /<([a-zA-Z0-9_]+)/, m)) { print m[1]; exit }}' "$f")
+            [ -n "$t" ] || t="unknown"
+            dest="$ROOT/$(map_path "$t")"; mkdir -p "$dest"
+            mv "$f" "$dest/" || true
+          done
+          find "$ROOT" -type d -empty -exec touch {}/.gitkeep \; || true
+
+          COUNT=$(find "$ROOT" -type f -name '*.xml' 2>/dev/null | wc -l | tr -d ' ')
+          echo "Imported & sorted object files: $COUNT" | tee -a "$LOG_PATH"
+
+          # Expose count for later steps
+          echo "count=$COUNT" >> "$GITHUB_OUTPUT"
+
+          # Sync temp project into repo only if we have content
+          if [ "$COUNT" -gt 0 ]; then
+            cd "$GITHUB_WORKSPACE"
+            mkdir -p "$PROJECT_DIR"
+            rsync -a --delete "$TMP_DIR/proj/" "$GITHUB_WORKSPACE/$PROJECT_DIR/" 2>&1 | tee -a "$LOG_PATH"
+          fi
+
+      - name: Commit & push snapshot (only if we imported files)
+        if: ${{ steps.import.outputs.count && steps.import.outputs.count != '0' }}
+        run: |
+          git config --local user.email "backup@yourorg.com"
+          git config --local user.name "NetSuite Backup Bot"
+          git add -A
+          git diff --staged --quiet || git commit -m "NetSuite backup $(date -u +%F)"
+          git push
+
+      - name: Summarize exceptions (MD + JSON)
+        id: exceptions
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          LOG="$LOG_PATH"
+          mkdir -p reports
+          MD="reports/IMPORT_ISSUES_$(date -u +%Y%m%d).md"
+          JS="reports/IMPORT_ISSUES_$(date -u +%Y%m%d).json"
+          [ -f "$LOG" ] || : > "$LOG"
+
+          count() { # usage: count 'regex'
+            local n
+            n=$(grep -E -ci -- "$1" "$LOG" 2>/dev/null || true)
+            printf '%s' "$n" | tr -cd '0-9' | awk '{print ($0=="")?0:$0}'
+          }
+
+          LOCKED=$(count 'is locked')
+          PERM=$(count 'Permission Violation')
+          DISALLOWED=$(count 'Only files under the "SuiteScripts"')
+          FIELDID=$(count 'Use as Field ID')
+          FEATURE=$(count 'feature is disabled')
+          DEADFIELD=$(count 'There is no such custom FIELD object with specified key')
+          INACTIVE=$(count 'is inactive|is Inactive')
+
+          TOTAL=$(( LOCKED + PERM + DISALLOWED + FIELDID + FEATURE + DEADFIELD + INACTIVE ))
+          ACTIONABLE=$(( TOTAL - LOCKED - DISALLOWED ))
+          [ $ACTIONABLE -lt 0 ] && ACTIONABLE=0
+
+          {
+            echo "# NetSuite Import Exceptions"
+            echo "_Generated $(date -u +%F' '%T) UTC_"
+            echo
+            echo "## Summary"
+            echo "- Locked objects: **$LOCKED**"
+            echo "- Disallowed path (/SuiteBundles etc.): **$DISALLOWED**"
+            echo "- Permission violations: **$PERM**"
+            echo "- Requires **Use as Field ID**: **$FIELDID**"
+            echo "- Disabled feature referenced: **$FEATURE**"
+            echo "- **Broken references** (dead fields in saved searches): **$DEADFIELD**"
+            echo "- Inactive objects referenced: **$INACTIVE**"
+            echo "- **TOTAL exceptions:** $TOTAL"
+            echo "- **ACTIONABLE (excludes locked + disallowed):** $ACTIONABLE"
+            echo
+            echo "## Actionable findings (tail of raw lines)"
+            echo '```'
+            grep -nE 'have not been imported|Permission Violation|Use as Field ID|Only files under|There is no such custom FIELD|is inactive|is Inactive|feature is disabled' "$LOG" \
+              | grep -v 'is locked' \
+              | grep -v 'Only files under the "SuiteScripts" folder can be imported' \
+              | tail -n 500 || true
+            echo '```'
+          } > "$MD"
+
+          printf '{"locked":%s,"permission":%s,"disallowedPath":%s,"needFieldId":%s,"featureDisabled":%s,"deadField":%s,"inactiveRefs":%s,"total":%s,"actionable":%s}\n' \
+            "$LOCKED" "$PERM" "$DISALLOWED" "$FIELDID" "$FEATURE" "$DEADFIELD" "$INACTIVE" "$TOTAL" "$ACTIONABLE" > "$JS"
+
+          git config --local user.email "backup@yourorg.com"
+          git config --local user.name "NetSuite Backup Bot"
+          git add "$MD" "$JS"
+          git diff --staged --quiet || git commit -m "Import exception report $(date -u +%F)"
+          git push || true
+
+          {
+            printf 'total=%s\n' "$TOTAL"
+            printf 'deadfield=%s\n' "$DEADFIELD"
+            printf 'actionable=%s\n' "$ACTIONABLE"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Upload raw import.log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: netsuite-import-log
+          path: reports/import.log
+          if-no-files-found: warn
+          retention-days: 7
+
+      - name: Slack alert (blocks; uses actionable; includes links)
+        if: ${{ steps.exceptions.outputs.actionable != '0' && env.SLACK_WEBHOOK_URL != '' }}
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          TOTAL="${{ steps.exceptions.outputs.total }}"
+          DEAD="${{ steps.exceptions.outputs.deadfield }}"
+          ACTIONABLE="${{ steps.exceptions.outputs.actionable }}"
+          TOTAL="${TOTAL:-0}"; DEAD="${DEAD:-0}"; ACTIONABLE="${ACTIONABLE:-0}"
+
+          # Build examples (short, actionable-only)
+          EXAMPLES="$(
+            grep -nE 'Permission Violation|Use as Field ID|There is no such custom FIELD|is inactive|is Inactive|feature is disabled' "$LOG_PATH" 2>/dev/null \
+              | grep -v 'is locked' \
+              | grep -v 'Only files under the "SuiteScripts" folder can be imported' \
+              | tail -n 12 \
+              | sed "s/\`/'/g" \
+              | awk '{sub(/^[[:space:]]+/, "", $0); print "• " $0}' \
+              | head -n 8
+          )"
+          EXAMPLES="${EXAMPLES:-}"
+
+          RUN_URL="${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
+          BRANCH="${GITHUB_REF_NAME:-main}"
+          REPORT_PATH="reports/IMPORT_ISSUES_$(date -u +%Y%m%d).md"
+          REPORT_URL="${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/blob/${BRANCH}/${REPORT_PATH}"
+
+          payload="$(jq -n \
+            --arg repo "$GITHUB_REPOSITORY" \
+            --arg run "$RUN_URL" \
+            --arg report "$REPORT_URL" \
+            --arg total "$TOTAL" \
+            --arg actionable "$ACTIONABLE" \
+            --arg dead "$DEAD" \
+            --arg examples "$EXAMPLES" \
+            '
+            def section(txt): {"type":"section","text":{"type":"mrkdwn","text":txt}};
+            def field(txt): {"type":"mrkdwn","text":txt};
+            {
+              blocks: [
+                {"type":"header","text":{"type":"plain_text","text":"NetSuite backup exceptions"}},
+                section("*Repo:* \($repo)\n*Run:* <\($run)|Open logs>\n*Report:* <\($report)|MD summary>"),
+                {"type":"section","fields":[
+                  field("*Total exceptions:*\n\($total)"),
+                  field("*Actionable:*\n\($actionable)"),
+                  field("*Dead-field refs:*\n\($dead)")
+                ]}
+              ]
+            }
+            | if ($examples|length) > 0
+              then .blocks += [ section("*Examples:*\n\($examples)") ]
+              else .
+              end
+            ')"
+
+          curl -s -X POST -H 'Content-type: application/json' \
+            --data "$payload" \
+            "$SLACK_WEBHOOK_URL" || true
+
+      - name: Fail job if nothing imported (keeps reporting but marks run red)
+        if: ${{ steps.import.outputs.count == '0' }}
+        run: exit 1
+
+      - name: Cleanup
+        if: always()
+        run: rm -f /tmp/private.pem || true

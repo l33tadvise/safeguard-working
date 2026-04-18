@@ -1,0 +1,32 @@
+<customlist scriptid="customlist_inventory_count_year">
+  <description></description>
+  <isinactive>F</isinactive>
+  <isordered>T</isordered>
+  <name>Inventory Count Year</name>
+  <customvalues>
+    <customvalue scriptid="val_57264_5411584_sb1_975">
+      <isinactive>F</isinactive>
+      <value>2025</value>
+    </customvalue>
+    <customvalue scriptid="val_57265_5411584_sb1_639">
+      <isinactive>F</isinactive>
+      <value>2026</value>
+    </customvalue>
+    <customvalue scriptid="val_57266_5411584_sb1_645">
+      <isinactive>F</isinactive>
+      <value>2027</value>
+    </customvalue>
+    <customvalue scriptid="val_57267_5411584_sb1_287">
+      <isinactive>F</isinactive>
+      <value>2028</value>
+    </customvalue>
+    <customvalue scriptid="val_57268_5411584_sb1_784">
+      <isinactive>F</isinactive>
+      <value>2029</value>
+    </customvalue>
+    <customvalue scriptid="val_57269_5411584_sb1_819">
+      <isinactive>F</isinactive>
+      <value>2030</value>
+    </customvalue>
+  </customvalues>
+</customlist>

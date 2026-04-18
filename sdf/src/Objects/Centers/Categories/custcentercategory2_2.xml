@@ -1,0 +1,25 @@
+<centercategory scriptid="custcentercategory2_2">
+  <center>ACCOUNTCENTER</center>
+  <centertab>[scriptid=custcentertab7]</centertab>
+  <label>Reports</label>
+  <links>
+    <link>
+      <linklabel>Generate Report</linklabel>
+      <linkobject>[scriptid=customscript_fam_generatereport_su.customdeploy_fam_generatereport_su]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>My Reports</linklabel>
+      <linkobject>[scriptid=customscript_fam_reportshistory_su.customdeploy_fam_reportshistory_su]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Customize Report Template</linklabel>
+      <linkobject>[scriptid=customscript_fam_reporttemplate_su.customdeploy_fam_reporttemplate_su]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

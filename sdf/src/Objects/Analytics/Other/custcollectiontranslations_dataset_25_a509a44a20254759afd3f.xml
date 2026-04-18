@@ -1,0 +1,46 @@
+<translationcollection scriptid="custcollectiontranslations_dataset_25_a509a44a20254759afd3f">
+  <defaultlanguage>en-US</defaultlanguage>
+  <name translate="T">[scriptid=custcollectiontranslations_dataset_25_a509a44a20254759afd3f.dataset_name_473_6]</name>
+  <strings>
+    <string scriptid="dataset_field_473_1">
+      <defaulttranslation>Subsidiary</defaulttranslation>
+      <description>Field in dataset</description>
+    </string>
+    <string scriptid="dataset_formula_473_2">
+      <defaulttranslation>Total Expenses</defaulttranslation>
+      <description>Formula field in dataset</description>
+    </string>
+    <string scriptid="dataset_formula_473_3">
+      <defaulttranslation>Net Assets</defaulttranslation>
+      <description>Formula field in dataset</description>
+    </string>
+    <string scriptid="dataset_formula_473_4">
+      <defaulttranslation>Revenue Released</defaulttranslation>
+      <description>Formula field in dataset</description>
+    </string>
+    <string scriptid="dataset_formula_473_5">
+      <defaulttranslation>Total Revenue</defaulttranslation>
+      <description>Formula field in dataset</description>
+    </string>
+    <string scriptid="dataset_name_473_6">
+      <defaulttranslation>FY24 Net Assets by Program</defaulttranslation>
+      <description>Name in dataset</description>
+    </string>
+    <string scriptid="dataset_description_473_7">
+      <defaulttranslation>This workbook shows the program revenue, expense, and net assets. It includes the pivots by subsidiary and accounts as well as graphical visualization of this data.	</defaulttranslation>
+      <description>Description of a dataset</description>
+    </string>
+    <string scriptid="dataset_field_473_8">
+      <defaulttranslation>Account</defaulttranslation>
+      <description>Field in dataset</description>
+    </string>
+    <string scriptid="dataset_field_473_9">
+      <defaulttranslation>Grant</defaulttranslation>
+      <description>Field in dataset</description>
+    </string>
+    <string scriptid="dataset_field_473_10">
+      <defaulttranslation>Region</defaulttranslation>
+      <description>Field in dataset</description>
+    </string>
+  </strings>
+</translationcollection>
